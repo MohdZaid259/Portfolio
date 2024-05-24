@@ -5,6 +5,10 @@ import instagram from '../Media/instagram.png'
 import github from '../Media/github.png'
 import linkedin from '../Media/linkedin.png'
 import twitter from '../Media/twitter.png'
+import paperplane from '../Media/paperplane.png'
+import phonecall from '../Media/phonecall.png'
+import download from '../Media/download.png'
+import location from '../Media/location.png'
 
 function Contact() {
 
@@ -24,17 +28,13 @@ function Contact() {
             <p className='font-bold text-green-400../Media/mail.png'>razvizaid259@gmail.com</p>
             </div>
         </div>
-        <div className="flex ml-5 gap-5">
-            <Link to='https://www.instagram.com/zaid_officials374/'><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={instagram} alt="" /></Link>
-            <Link to="https://x.com/ZAIDrazvi9"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></Link>
-            <Link to="https://www.linkedin.com/in/mohd-zaid-b28aa2248/"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></Link>
+        <div className="flex ml-5 mb-20 gap-5">
+            <Link to="https://x.com/ZAIDrazvi9"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></Link>
+            <Link to="https://www.linkedin.com/in/mohd-zaid-b28aa2248/"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></Link>
             <Link to="https://github.com/MohdZaid259"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></Link>
-        </div>
-        <div className="flex ml-5 mb-10 gap-5">
-            <Link to='https://www.instagram.com/zaid_officials374/'><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={instagram} alt="" /></Link>
-            <Link to="https://x.com/ZAIDrazvi9"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></Link>
-            <Link to="https://www.linkedin.com/in/mohd-zaid-b28aa2248/"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></Link>
-            <Link to="https://github.com/MohdZaid259"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></Link>
+            <Link to=''><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={location} alt="" /></Link>
+            <Link to=""><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={phonecall} alt="" /></Link>
+            <Link to=""><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={paperplane} alt="" /></Link>
         </div>
       </div>
       <div className="flex flex-col border-2 border-green-40 w-2/5 h-4/5 bg-gray-900 rounded-lg p-5">

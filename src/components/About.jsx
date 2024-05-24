@@ -2,7 +2,7 @@ import React from 'react'
 import qopen from '../Media/qopen.png'
 import qclose from '../Media/qclose.png'
 import signatureop from '../Media/signatureop.png'
-import { NavLink } from "react-router-dom";
+import Skills from '../components/Skills'
 
 export default function About() {
   const style = {
@@ -22,12 +22,8 @@ export default function About() {
         </p>
         <img className='ml-96' src={signatureop} style={style} alt=""/>
       </div>
-      <div className='flex border-2 w-full mr-10 justify-center items-start'>
-        <div className='pt-10 flex justify-evenly w-full'>
-          <NavLink className={({isActive})=>`${isActive?'text-green-500 underline':''} mx-3 px-2 py-0.5 hover:text-green-400 text-xl font-semibold`} to='/skills'>Skills</NavLink>
-          <NavLink className={({isActive})=>`${isActive?'text-green-500 underline':''} mx-3 px-2 py-0.5 hover:text-green-400 text-xl font-semibold`} to='/education'>Education</NavLink>
-        </div>
-        <div></div>
+      <div className='flex flex-col w-full mr-10 justify-center items-start'>
+        <Skills/>
       </div>
     </div>
   )

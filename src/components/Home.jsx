@@ -7,7 +7,6 @@ import twitter from '../Media/twitter.png'
 import Typed from 'typed.js';
 
 function Home() {
-      // Create reference to store the DOM element containing the animation
     const element =useRef(null);
   
     useEffect(() => {
@@ -27,12 +26,11 @@ function Home() {
         <h1 className='py-3 font-extrabold text-5xl'>I am <span ref={element} className="text-green-500">Mohd Zaid.</span></h1>
         <p className='text-lg w-4/5'>A Creative Exlorer, on a compellong journey to reshape the future of Tech, guided by the thirst for innovation.</p>
         <div className="flex gap-5">
-            <Link to='https://www.instagram.com/zaid_officials374/'><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={instagram} alt="" /></Link>
-            <Link to="https://x.com/ZAIDrazvi9"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></Link>
-            <Link to="https://www.linkedin.com/in/mohd-zaid-b28aa2248/"><img className='invert w-6 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></Link>
+            <Link to="https://x.com/ZAIDrazvi9"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></Link>
+            <Link to="https://www.linkedin.com/in/mohd-zaid-b28aa2248/"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></Link>
             <Link to="https://github.com/MohdZaid259"><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></Link>
         </div>
-        <button className='my-2 bg-green-500 rounded-lg w-1/5 py-0.5 text-lg'>Download CV</button>
+        <button className='my-2 bg-green-500 rounded-lg w-1/5 py-1 text-xl'>Download CV</button>
       </div>
       <div>
         <img src="" alt="" />
