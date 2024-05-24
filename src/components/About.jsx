@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <div className='flex h-full gap-7 justify-center bg-gradient-to-tr from-black  via-gray-950 to-gray-900 text-white'>
-      <div className='flex flex-col pl-24 justify-center items-start '>
+      <div className='flex flex-col pl-16 justify-center items-start '>
         <h1 className='text-4xl mb-7 font-bold text-green-400'># know me</h1>
         <p className='w-full pr-20 text-xl'>
           <img className='w-8' src={qopen} style={style} alt=""/>

@@ -14,47 +14,47 @@ import java from '../Media/skills/java.png'
 import c from '../Media/skills/c.png' 
 import mysql from '../Media/skills/mysql.png' 
 import mongodb from '../Media/skills/mongodb.png' 
-// import git from '../Media/skills/git.png' 
+import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
 
 function Skills() {
   return (
-    <div className='flex flex-wrap gap-10'>
-      <div>
-        <span className='text-xl text-green-500'>Web Development</span>
-        <div className='pl-5 pt-2'>
-        <p className='flex items-center gap-5'>HTML 5 <img className='w-8' src={html}/></p>
-        <p className='flex items-center gap-5'>CSS 3<img className='w-8' src={css}/></p>
-        <p className='flex items-center gap-5'>React<img className='w-8' src={atom}/></p>
-        <p className='flex items-center gap-5'>Redux<img className='w-8' src={redux}/></p>
-        <p className='flex items-center gap-5'>Tailwind<img className='w-8' src={tailwind}/></p>
-        <p className='flex items-center gap-5'>NodeJs<img className='w-8' src={nodejs}/></p>
-        <p className='flex items-center gap-5'>Appwrite<img className='w-8' src={appwrite}/></p>
-        <p className='flex items-center gap-5'>ExpressJs<img className='w-8 invert' src={express}/></p>
-        <p className='flex items-center gap-5'>Framer Motion<img className='w-8' src={framer}/></p>
+    <div className='flex flex-col flex-wrap gap-10'>
+      <div className=''>
+        <span className='text-2xl font-semibold text-green-400'>Web Development</span>
+        <div className='flex mt-5 gap-5 flex-wrap'>
+        <img className='w-10' src={html}/>        
+        <img className='w-10' src={css}/>
+        <img className='w-10' src={atom}/>
+        <img className='w-10' src={redux}/>    
+        <img className='w-10' src={tailwind}/> 
+        <img className='w-10' src={nodejs}/>
+        <img className='w-10' src={appwrite}/>
+        <img className='invert w-10' src={express}/>
+        <img className='w-10' src={framer}/>
         </div>
       </div>
       <div>
-        <span className='text-xl text-green-500'>Languages known</span>
-        <div className='pl-5 pt-2'>
-        <div className='flex items-center gap-5'>Javascript<img className='w-8' src={js}/></div>
-        <div className='flex items-center gap-5'>Java<img className='w-8' src={java}/></div>
-        <div className='flex items-center gap-5'>C<img className='w-8' src={c}/></div>
-        <div className='flex items-center gap-5'>C++<img className='w-8' src={cpp}/></div>
+        <span className='text-2xl font-semibold text-green-400'>Languages known</span>
+        <div className='flex mt-5 gap-5 flex-wrap'>
+        <img className='w-10' src={js}/>
+        <img className='w-10' src={java}/>
+        <img className='w-10' src={c}/>
+        <img className='w-10' src={cpp}/>
         </div>
       </div>
       <div>
-        <span className='text-xl text-green-500'>DataBase Management</span>
-        <div className='pl-5 pt-2'>
-        <p className='flex items-center gap-5'>MySQL<img className='w-8' src={mysql}/></p>
-        <p className='flex items-center gap-5'>MongoDB<img className='w-8' src={mongodb}/></p>
+        <span className='text-2xl font-semibold text-green-400'>DataBase Management</span>
+        <div className='flex mt-5 gap-5 flex-wrap'>
+        <img className='w-10' src={mysql}/>
+        <img className='w-10' src={mongodb}/>
         </div>
       </div>
       <div>
-        <span className='text-xl text-green-500'>Version Control</span>
-        <div className='pl-5 pt-2'>
-        <div className='flex items-center gap-5'>Git<img className='w-8 invert' src={github}/></div>
-        <div className='flex items-center gap-5'>Github<img className='w-8 invert' src={github}/></div>
+        <span className='text-2xl font-semibold text-green-400'>Version Control</span>
+        <div className='flex mt-5 gap-5 flex-wrap'>
+        <img className='w-10 invert' src={github}/>
+        <img className='w-10' src={git}/>
         </div>
       </div>
     </div>
