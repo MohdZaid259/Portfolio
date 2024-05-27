@@ -8,8 +8,9 @@ import close from '../Media/close.png'
 
 export default function Header() {
   const headerstyle = {
-    boxShadow: '0 5px 8px rgba(0, 0, 0, 0.4)',
+    boxShadow: '0 0 25px rgba(107, 114, 128, 0.5)'
   };
+
   const [ham, setHam] = useState(false);
   const handleHam = () => setHam(!ham); 
 
