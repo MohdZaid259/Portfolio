@@ -20,7 +20,7 @@ function Home() {
     }, []);
 
   return (
-    <div className='bg-gradient-to-tr from-black  via-gray-950 to-gray-900 text-white w-full h-full flex'>
+    <div className='bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white w-full h-full flex'>
       <div className='flex flex-col justify-center pl-16'>
         <h3 className='text-xl'>Hi, There!</h3>
         <h1 className='py-3 font-extrabold text-5xl'>I am <span ref={element} className="text-green-500">Mohd Zaid.</span></h1>

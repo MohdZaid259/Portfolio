@@ -9,6 +9,7 @@ import bloggerhero from '../Media/showoff/bloggerhero.png'
 import blogger1 from '../Media/showoff/blogger1.png'
 import blogger2 from '../Media/showoff/blogger2.png'
 import blogger3 from '../Media/showoff/blogger3.png'
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -18,7 +19,9 @@ const projects = [
     image: ecommercehero,
     image1: ecommerce1,
     image2: ecommerce2,
-    image3: ecommerce3
+    image3: ecommerce3,
+    liveDemo: "https://live-demo-cara.com",
+    github: "https://github.com/cara-repo"
   },
   {
     title: "Blogger",
@@ -27,7 +30,9 @@ const projects = [
     image: bloggerhero,
     image1: blogger1,
     image2: blogger2,
-    image3: blogger3 
+    image3: blogger3,
+    liveDemo: "https://live-demo-cara.com",
+    github: "https://github.com/cara-repo" 
   }
 ];
 
@@ -38,16 +43,19 @@ const style = {
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [pressedKey,setPressedKey] = useState('')
+  const [mainImage, setMainImage] = useState(projects[0].image);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? projects.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+    setMainImage(projects[newIndex].image); // Update the main image
   };
   const nextSlide = () => {
     const isLastSlide = currentIndex === projects.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+    setMainImage(projects[newIndex].image); // Update the main image
   };
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -59,26 +67,39 @@ const Carousel = () => {
         setPressedKey('ArrowRight')
       }
     };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
+    document.addEventListener('keydown', handleKeyDown,  {once: true});
   }, [currentIndex]);
 
+  const changeMainImage = (newImage) => {
+    setMainImage(newImage);
+  };
+
   return (
-    <div className='bg-gradient-to-tr h-screen from-black  via-gray-950 to-gray-900 text-white'>
-      <div className="rounded-lg relative w-full max-w-4xl mx-auto mt-5 overflow-hidden" style={style}>
-      <div className="relative h-96">
+    <div className='bg-gradient-to-tr h-full from-black via-gray-950 to-gray-800 text-white'>
+      <div className="rounded-lg relative w-full h-3/4 max-w-4xl mx-auto mt-5 overflow-hidden" style={style}>
+      <div className="relative h-full">
         {projects.map((project, index) => (
           <div
             key={index}
             className={`absolute transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
           > 
               <img
-                src={project.image}
+                src={mainImage}
                 alt={project.title}
-                className="object-cover w-full h-full"
+                className="object-cover aspect-video"
               />
+              <div className="absolute bottom-0 left-0 mb-8 ml-8 space-x-4">
+                  <Link
+                    to={project.liveDemo}
+                    target="_blank"
+                    className="border-2 hover:bg-gray-800 hover:text-white border-green-400 text-black px-3 py-1 rounded"
+                  >Live Demo</Link>
+                  <Link
+                    to={project.github}
+                    target="_blank"
+                    className="border-2 hover:bg-transparent hover:text-black border-green-500 bg-green-500 text-white px-3 py-1 rounded"
+                  >Github</Link>
+               </div>   
           </div>
         ))}
       </div>
@@ -104,23 +125,21 @@ const Carousel = () => {
             <img
                   src={project.image1}
                   alt={project.title}
-                  className="inline object-cover w-1/5 rounded-lg"
+                  className="inline object-cover w-1/4 rounded-lg"
+                  onClick={() => changeMainImage(project.image1)}
                 />
             <img
                   src={project.image2}
                   alt={project.title}
-                  className="inline object-cover w-1/5 rounded-lg"
+                  className="inline object-cover w-1/4 rounded-lg"
+                  onClick={() => changeMainImage(project.image2)}
                 />
             <img
                   src={project.image3}
                   alt={project.title}
-                  className="inline object-cover w-1/5 rounded-lg"
+                  className="inline object-cover w-1/4 rounded-lg"
+                  onClick={() => changeMainImage(project.image3)}
                 />
-            {/* <div className="flex flex-col items-center justify-center text-center text-white p-4">
-                    <h2 className="text-3xl font-bold">{project.title}</h2>
-                    <h3 className="text-2xl">{project.subtitle}</h3>
-                    <p className="mt-2">{project.description}</p>
-              </div> */}
             </div>
           ))}
       </div>
@@ -128,3 +147,9 @@ const Carousel = () => {
   );
 };
 export default Carousel;
+
+{/* <div className="flex flex-col items-center justify-center text-center text-white p-4">
+                    <h2 className="text-3xl font-bold">{project.title}</h2>
+                    <h3 className="text-2xl">{project.subtitle}</h3>
+                    <p className="mt-2">{project.description}</p>
+              </div> */}

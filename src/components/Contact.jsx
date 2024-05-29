@@ -7,7 +7,6 @@ import linkedin from '../Media/linkedin.png'
 import twitter from '../Media/twitter.png'
 import paperplane from '../Media/paperplane.png'
 import phonecall from '../Media/phonecall.png'
-import download from '../Media/download.png'
 import location from '../Media/location.png'
 
 function Contact() {
@@ -17,7 +16,7 @@ function Contact() {
   }
 
   return (
-      <div className='bg-gradient-to-tr from-black  via-gray-950 to-gray-900 text-white w-full h-full flex justify-around items-center'>
+      <div className='bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white w-full h-full flex justify-around items-center'>
       <div className='flex flex-col gap-3'>
         <h2 className='text-3xl font-bold '>Let's Chat.</h2>
         <h2 className='text-3xl font-bold mb-5'>Tell me about your project.</h2>
