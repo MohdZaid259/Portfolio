@@ -41,8 +41,8 @@ function Project() {
 
   return (
     <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full from-black via-gray-950 to-gray-800 text-white'>
-      {projects.map((project)=>{
-        return <div className='mb-20'>
+      {projects.map((project,id)=>{
+        return <div key={id} className='mb-20'>
           <div className='flex mx-12 my-4 gap-6'>
             <div className='h-full flex-1' style={style}>
               <img className='rounded-md' src={hero || project.images[0]} alt={project.title} />
@@ -50,7 +50,7 @@ function Project() {
             <div className='h-auto flex flex-col items-center -mt-1 gap-4 flex-[0.32]'>
               {project.images.slice(1).map((image, id) => (
                 <div key={id} className='rounded-md w-full' style={style}>
-                  <img className='rounded-md aspect-video' src={image} onClick={() => handleHero(image)} alt={project.title} />
+                  <img className='rounded-md aspect-video' src={image} onClick={()=>handleHero(image)} alt={project.title} />
                 </div>
               ))}
             </div>
