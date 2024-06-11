@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ecommercehero from '../Media/showoff/ecommercehero.png';
 import ecommerce1 from '../Media/showoff/ecommerce1.png';
 import ecommerce2 from '../Media/showoff/ecommerce2.png';
@@ -35,6 +35,14 @@ const style = {
 function Project() {
   const [mainImageIndices, setMainImageIndices] = useState(Array(projects.length).fill(0));
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainImageIndices(Array(projects.length).fill(0)); // Reset main image indices to default
+    }, 4000); 
+    
+    return () => clearTimeout(timer);
+  }, [mainImageIndices]);
+
   const handleImageClick = (projectIndex, subImageIndex) => {
     setMainImageIndices(prevIndices => {
       const newIndices = [...prevIndices];
@@ -43,24 +51,28 @@ function Project() {
     });
   };
 
-
   return (
     <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full from-black via-gray-950 to-gray-800 text-white'>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
+
         return (
           <div key={projectIndex} className='mb-20'>
             <div className='flex mx-12 my-4 gap-6'>
               <div className='h-full flex-1' style={style}>
-                <img className='rounded-md' src={mainImage} alt={project.title} />
+                <img 
+                  className='rounded-md transition-opacity duration-1000' 
+                  src={mainImage} 
+                  alt={project.title} 
+                />
               </div>
               <div className='h-auto flex flex-col items-center -mt-1 gap-4 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex} className='rounded-md w-full' style={style}>
                       <img
-                        className='rounded-md aspect-video'
+                        className='rounded-md aspect-video transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}
                         alt={project.title}
@@ -89,7 +101,7 @@ function Project() {
         );
       })}
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
