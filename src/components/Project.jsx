@@ -33,44 +33,60 @@ const style = {
 };
 
 function Project() {
-  const [hero,setHero] = useState('')
+  const [mainImageIndices, setMainImageIndices] = useState(Array(projects.length).fill(0));
 
-  const handleHero = (image) => {
-    setHero(image);
-  }
+  const handleImageClick = (projectIndex, subImageIndex) => {
+    setMainImageIndices(prevIndices => {
+      const newIndices = [...prevIndices];
+      newIndices[projectIndex] = subImageIndex;
+      return newIndices;
+    });
+  };
+
 
   return (
     <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full from-black via-gray-950 to-gray-800 text-white'>
-      {projects.map((project,id)=>{
-        return <div key={id} className='mb-20'>
-          <div className='flex mx-12 my-4 gap-6'>
-            <div className='h-full flex-1' style={style}>
-              <img className='rounded-md' src={hero || project.images[0]} alt={project.title} />
+      {projects.map((project, projectIndex) => {
+        const mainImageIndex = mainImageIndices[projectIndex];
+        const mainImage = project.images[mainImageIndex];
+        return (
+          <div key={projectIndex} className='mb-20'>
+            <div className='flex mx-12 my-4 gap-6'>
+              <div className='h-full flex-1' style={style}>
+                <img className='rounded-md' src={mainImage} alt={project.title} />
+              </div>
+              <div className='h-auto flex flex-col items-center -mt-1 gap-4 flex-[0.32]'>
+                {project.images.map((image, subImageIndex) => (
+                  subImageIndex !== mainImageIndex && (
+                    <div key={subImageIndex} className='rounded-md w-full' style={style}>
+                      <img
+                        className='rounded-md aspect-video'
+                        src={image}
+                        onClick={() => handleImageClick(projectIndex, subImageIndex)}
+                        alt={project.title}
+                      />
+                    </div>
+                  )
+                ))}
+              </div>
             </div>
-            <div className='h-auto flex flex-col items-center -mt-1 gap-4 flex-[0.32]'>
-              {project.images.slice(1).map((image, id) => (
-                <div key={id} className='rounded-md w-full' style={style}>
-                  <img className='rounded-md aspect-video' src={image} onClick={()=>handleHero(image)} alt={project.title} />
-                </div>
-              ))}
+            <div className='mx-12 my-5'>
+              <div className='flex gap-5 mx-6 mt-5 mb-5'>
+                <button>
+                  <Link to={project.github} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Github</Link>
+                </button>
+                <button>
+                  <Link to={project.liveDemo} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Live Demo</Link>
+                </button>
+              </div>
+              <div className='tracking-wider text-xl'>
+                <span className='text-3xl font-bold text-green-400'>{project.title} : </span>
+                <span className='text-2xl font-semibold'>{project.subtitle}</span><br />
+                <span className=''>{project.description}</span>
+              </div>
             </div>
           </div>
-          <div className='mx-12 my-5'>
-            <div className='flex gap-5 mx-6 mt-5 mb-5'>
-              <button className=''>
-                <Link to={project.github} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Github</Link>
-              </button>
-              <button>
-                <Link to={project.liveDemo} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Live Demo</Link>
-              </button>
-            </div>
-            <div className='tracking-wider text-xl'>
-              <span className='text-3xl font-bold text-green-400'>{project.title} : </span>
-              <span className='text-2xl font-semibold'>{project.subtitle}</span><br />
-              <span className=''>{project.description}</span>
-            </div>
-          </div>
-        </div>
+        );
       })}
     </div>
   )
