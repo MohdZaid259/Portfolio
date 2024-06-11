@@ -19,42 +19,52 @@ import github from '../Media/skills/github.png'
 
 function Skills() {
   return (
-    <div className='flex flex-col flex-wrap gap-10'>
-      <div className=''>
-        <span className='text-2xl font-semibold text-green-400'>Web Development</span>
-        <div className='flex mt-5 gap-5 flex-wrap'>
-        <img className='w-10' src={html}/>        
-        <img className='w-10' src={css}/>
-        <img className='w-10' src={atom}/>
-        <img className='w-10' src={redux}/>    
-        <img className='w-10' src={tailwind}/> 
-        <img className='w-10' src={nodejs}/>
-        <img className='w-10' src={appwrite}/>
-        <img className='invert w-10' src={express}/>
-        <img className='w-10' src={framer}/>
-        </div>
+    <div className='h-full flex p-10 gap-5 bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white'>
+      <div className='flex w-3/5'>
+        <p className='my-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic dolorem error voluptatibus pariatur odit, quaerat mollitia, delectus blanditiis saepe, quasi velit facilis eveniet consequuntur quibusdam dolorum culpa distinctio eos! Similique non vel harum.</p>
       </div>
       <div>
-        <span className='text-2xl font-semibold text-green-400'>Languages known</span>
-        <div className='flex mt-5 gap-5 flex-wrap'>
-        <img className='w-10' src={js}/>
-        <img className='w-10' src={java}/>
-        <img className='w-10' src={c}/>
-        <img className='w-10' src={cpp}/>
-        </div>
-      </div>
-      <div>
-        <span className='text-2xl font-semibold text-green-400'>DataBase Management</span>
-        <div className='flex mt-5 gap-5 flex-wrap'>
-        <img className='w-10' src={mysql}/>
-        <img className='w-10' src={mongodb}/>
-        </div>
-      </div>
-      <div>
-        <span className='text-2xl font-semibold text-green-400'>Version Control</span>
-        <div className='flex mt-5 gap-5 flex-wrap'>
-        <img className='w-10 invert' src={github}/>
-        <img className='w-10' src={git}/>
+        <div className='flex flex-col flex-wrap gap-5'>
+          <div className=''>
+            <div className='text-2xl font-semibold text-green-400'>Frontend Techstack</div>
+              <div className='ml-7 flex my-5 gap-5 flex-wrap'>
+                <img className='w-11' src={html}/>        
+                <img className='w-11' src={css}/>
+                <img className='w-11' src={atom}/>
+                <img className='w-11' src={redux}/>    
+                <img className='w-11' src={tailwind}/> 
+                <img className='w-11' src={framer}/>
+              </div>
+            <div className='text-2xl font-semibold text-green-400'>Backend Techstack</div>
+              <div className='ml-7 flex mt-5 gap-5 flex-wrap'>
+                <img className='w-11' src={nodejs}/>
+                <img className='invert w-11' src={express}/>
+                <img className='w-11' src={appwrite}/>
+              </div>
+          </div>
+          <div className=''>
+            <span className='text-2xl font-semibold text-green-400'>Languages known</span>
+            <div className='ml-7 flex mt-5 gap-5 flex-wrap'>
+            <img className='w-11' src={js}/>
+            <img className='w-11' src={java}/>
+            <img className='w-11' src={c}/>
+            <img className='w-11' src={cpp}/>
+            </div>
+          </div>
+          <div className=''>
+            <span className='text-2xl font-semibold text-green-400'>Database Management</span>
+            <div className='ml-7 flex mt-5 gap-5 flex-wrap'>
+            <img className='w-11' src={mysql}/>
+            <img className='w-11' src={mongodb}/>
+            </div>
+          </div>
+          <div className=''>
+            <span className='text-2xl font-semibold text-green-400'>Version Control</span>
+            <div className='ml-7 flex mt-5 gap-5 flex-wrap'>
+            <img className='w-11 invert' src={github}/>
+            <img className='w-11' src={git}/>
+            </div>
+          </div>
         </div>
       </div>
     </div>

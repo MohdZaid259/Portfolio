@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Cara",
     subtitle: "The ecommerce",
-    description: "Let your dreams come true",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni possimus reprehenderit veniam animi. Accusantium eos et quibusdam laboriosam esse quis asperiores facere recusandae velit eaque maiores atque sequi, error deleniti est quod officia?",
     images: [ecommercehero, ecommerce1, ecommerce2, ecommerce3],
     liveDemo: "https://live-demo-cara.com",
     github: "https://github.com/cara-repo"
@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Blogger",
     subtitle: "The Blogging website",
-    description: "Let your dreams come true",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni possimus reprehenderit veniam animi. Accusantium eos et quibusdam laboriosam esse quis asperiores facere recusandae velit eaque maiores atque sequi, error deleniti est quod officia?",
     images: [bloggerhero, blogger1, blogger2, blogger3],
     liveDemo: "https://live-demo-cara.com",
     github: "https://github.com/cara-repo"
@@ -37,7 +37,7 @@ function Project() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setMainImageIndices(Array(projects.length).fill(0)); // Reset main image indices to default
+      setMainImageIndices(Array(projects.length).fill(0));
     }, 4000); 
     
     return () => clearTimeout(timer);
@@ -93,8 +93,8 @@ function Project() {
               </div>
               <div className='tracking-wider text-xl'>
                 <span className='text-3xl font-bold text-green-400'>{project.title} : </span>
-                <span className='text-2xl font-semibold'>{project.subtitle}</span><br />
-                <span className=''>{project.description}</span>
+                <span className='text-2xl font-semibold'>{project.subtitle}</span>
+                <span className='inline-block mt-3'>{project.description}</span>
               </div>
             </div>
           </div>

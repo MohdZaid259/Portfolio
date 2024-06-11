@@ -13,7 +13,7 @@ export default function About() {
     <div className='flex h-full gap-7 justify-center bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white'>
       <div className='flex flex-col pl-16 justify-center items-start '>
         <h1 className='text-4xl mb-7 font-bold text-green-400'># know me</h1>
-        <p className='w-full pr-20 text-xl'>
+        <p className='w-2/3 pr-20 text-xl'>
           <img className='w-8' src={qopen} style={style} alt=""/>
           I'm Mohd Zaid, a dedicated computer applications student with a forte for coding and a relentless drive for web game development.<br/><br/>
           Beyond the digital landscape, I derive immense joy from photography and the art of creative editing. I thrive on tackling complex problems as they fuel my drive for personal and academic growth. <br/><br/>
@@ -21,9 +21,6 @@ export default function About() {
           <img className='w-8' src={qclose} style={style} alt=""/>
         </p>
         <img className='ml-96' src={signatureop} style={style} alt=""/>
-      </div>
-      <div className='flex flex-col w-full mr-10 justify-center items-start'>
-        <Skills/>
       </div>
     </div>
   )

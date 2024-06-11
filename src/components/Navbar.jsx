@@ -5,8 +5,8 @@ import z from '../Media/z.png'
 import menu from '../Media/menu.png'
 import close from '../Media/close.png'
 
-
 export default function Header() {
+
   const headerstyle = {
     boxShadow: '0 0 25px rgba(107, 114, 128, 0.5)'
   };
@@ -22,6 +22,10 @@ export default function Header() {
     {
       name: "About",
       slug: "/about"
+    },
+    {
+      name: "Skills",
+      slug: "/skills"
     },
     {
       name: "Projects",
