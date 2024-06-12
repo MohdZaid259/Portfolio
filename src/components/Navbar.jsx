@@ -34,7 +34,7 @@ export default function Header() {
   ]
 
   return (
-      <div className="flex justify-around items-center bg-teal-400 py-4 dark:bg-gradient-to-r from-black via-gray-950 to-gray-900 tracking-wider  font-footer" style={headerstyle}>
+      <div className="flex justify-around items-center bg-teal-400 py-4 dark:bg-gradient-to-r from-black via-gray-950 to-gray-900 tracking-wider" style={headerstyle}>
           <Link to='/'><img className="w-12" src={z} alt="" /></Link>
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
@@ -53,9 +53,9 @@ export default function Header() {
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-150 ease-in-out`}
             >
             {navItems.map((item,id)=>(
-              <NavLink key={id} className={({isActive})=>`${isActive?'text-green-400 underline':''} mx-3 hover:underline underline-offset-4`} to={item.slug}>{item.name}</NavLink>
+              <NavLink key={id} className={({isActive})=>`${isActive?'text-green-400 underline':''} mx-3 hover:underline text-xl underline-offset-4`} to={item.slug}>{item.name}</NavLink>
             ))}
-            <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md bg-green-600 px-2 py-0.5 hover:bg-green-700 text`} to='/contact'>Contact Me</NavLink>
+            <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md bg-green-600 px-2 py-0.5 hover:bg-green-700 text-xl`} to='/contact'>Contact Me</NavLink>
             </ul>
             <div className="ml-2"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>

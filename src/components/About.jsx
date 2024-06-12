@@ -2,7 +2,6 @@ import React from 'react'
 import qopen from '../Media/qopen.png'
 import qclose from '../Media/qclose.png'
 import signatureop from '../Media/signatureop.png'
-import Skills from '../components/Skills'
 
 export default function About() {
   const style = {

@@ -1,4 +1,4 @@
-import React, { createElement, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import html from '../Media/skills/html.png' 
 import css from '../Media/skills/css.png' 
 import atom from '../Media/skills/atom.png' 
@@ -29,7 +29,7 @@ function Skills() {
       box.style.height = `${size}px`
       console.log(window.innerWidth/2)
       const randomX = Math.random() * (window.innerWidth/2 - size);
-      const randomY = Math.random() * (window.innerHeight/2 - size);
+      const randomY = Math.random() * (window.innerHeight*4/5 - size);
       box.style.left = `${randomX}px`;
       box.style.top = `${randomY}px`;
       box.style.marginTop = '7rem'

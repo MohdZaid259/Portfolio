@@ -52,11 +52,10 @@ function Project() {
   };
 
   return (
-    <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full from-black via-gray-950 to-gray-800 text-white'>
+    <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full px-10 pt-2 from-black via-gray-950 to-gray-800 text-white'>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
-
         return (
           <div key={projectIndex} className='mb-20'>
             <div className='flex mx-12 my-4 gap-6'>
