@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createElement, useEffect } from 'react'
 import html from '../Media/skills/html.png' 
 import css from '../Media/skills/css.png' 
 import atom from '../Media/skills/atom.png' 
@@ -16,13 +16,32 @@ import mysql from '../Media/skills/mysql.png'
 import mongodb from '../Media/skills/mongodb.png' 
 import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
+import '../style.css'
 
 function Skills() {
+  useEffect(()=>{
+    for(let i=0;i<25;i++){
+      const box = document.createElement('div')
+      box.className='box absolute'
+
+      const size = Math.random() * (78 - 10) + 15;
+      box.style.width = `${size}px`
+      box.style.height = `${size}px`
+      console.log(window.innerWidth/2)
+      const randomX = Math.random() * (window.innerWidth/2 - size);
+      const randomY = Math.random() * (window.innerHeight/2 - size);
+      box.style.left = `${randomX}px`;
+      box.style.top = `${randomY}px`;
+      box.style.marginTop = '7rem'
+      box.style.marginLeft = '3rem'
+
+      shapeContainer.appendChild(box)
+    }
+  },[])
+
   return (
     <div className='h-full flex p-10 gap-5 bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white'>
-      <div className='flex w-3/5'>
-        <p className='my-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic dolorem error voluptatibus pariatur odit, quaerat mollitia, delectus blanditiis saepe, quasi velit facilis eveniet consequuntur quibusdam dolorum culpa distinctio eos! Similique non vel harum.</p>
-      </div>
+      <div id='shapeContainer' className='flex gap-3 flex-wrap w-3/5'></div>
       <div>
         <div className='flex flex-col flex-wrap gap-5'>
           <div className=''>

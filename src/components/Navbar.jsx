@@ -52,8 +52,8 @@ export default function Header() {
                   : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-150 ease-in-out`}
             >
-            {navItems.map((item)=>(
-              <NavLink className={({isActive})=>`${isActive?'text-green-400 underline':''} mx-3 hover:underline underline-offset-4`} to={item.slug}>{item.name}</NavLink>
+            {navItems.map((item,id)=>(
+              <NavLink key={id} className={({isActive})=>`${isActive?'text-green-400 underline':''} mx-3 hover:underline underline-offset-4`} to={item.slug}>{item.name}</NavLink>
             ))}
             <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md bg-green-600 px-2 py-0.5 hover:bg-green-700 text`} to='/contact'>Contact Me</NavLink>
             </ul>

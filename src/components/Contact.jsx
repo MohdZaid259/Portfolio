@@ -32,14 +32,14 @@ function Contact() {
             <Link to="" target='_blank'><img className='invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={paperplane} alt="" /></Link>
         </div>
       </div>
-      <div className="flex flex-col border-2 border-green-40 w-2/5 h-4/5 bg-gray-900 rounded-lg p-5">
-        <h2 className='text-3xl mb-7'>Send us a message</h2>
-        <form onSubmit={handleSubmit} className='flex flex-col gap-4 ' action="">
+      <div className="flex flex-col border-2 border-green-40 w-2/6 h-2/3 bg-gray-900 rounded-lg p-5">
+        <h2 className='text-3xl mb-4'>Send us a message</h2>
+        <form onSubmit={handleSubmit} className='flex flex-col gap-2 ' action="">
             <input className='bg-gray-950 p-1 px-2 text-lg rounded-sm' type="text" placeholder="Full name*"/>
             <input className='bg-gray-950 p-1 px-2 text-lg rounded-sm' type="text" placeholder="Email address*"/>
             <input className='bg-gray-950 p-1 px-2 text-lg rounded-sm' type="text" placeholder="Subject"/>
             <textarea className='bg-gray-950 p-1 px-2 text-lg rounded-sm' name="" id="" cols="20" rows="5" placeholder="Message"/>
-            <button type='submit' className='bg-green-600 hover:bg-green-700 p-2 rounded-lg text-xl'>Send Message</button>
+            <button type='submit' className='bg-green-600 hover:bg-green-700 mt-3 p-2 rounded-lg text-xl'>Send Message</button>
         </form>
       </div>
   </div>

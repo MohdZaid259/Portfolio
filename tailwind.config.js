@@ -9,6 +9,9 @@ export default {
       height: {
         '7/10-screen': '70vh',
         '24-screen':'24vh'
+      },
+      margin: {
+        '32rem': '32rem',
       }
     },
   },
