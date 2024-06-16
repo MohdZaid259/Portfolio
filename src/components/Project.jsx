@@ -52,13 +52,13 @@ function Project() {
   };
 
   return (
-    <div className='bg-teal-400 overflow-auto scrollbar-hide h-full px-10 pt-2 bg-gradient-to-br from-blue-400 via-blue-200 to-pink-100 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='bg-teal-400 overflow-auto scrollbar-hide h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
         return (
           <div key={projectIndex} className='mb-20'>
-            <div className='flex mx-12 my-4 gap-6'>
+            <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
               <div className='h-full flex-1' style={style}>
                 <img 
                   className='rounded-md transition-opacity duration-1000' 
@@ -66,7 +66,7 @@ function Project() {
                   alt={project.title} 
                 />
               </div>
-              <div className='h-auto flex flex-col items-center -mt-1 gap-4 flex-[0.32]'>
+              <div className='h-auto flex flex-col items-center -mt-1 gap-2 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex} className='rounded-md w-full' style={style}>
@@ -81,13 +81,13 @@ function Project() {
                 ))}
               </div>
             </div>
-            <div className='mx-12 my-5'>
-              <div className='flex gap-5 mx-6 mt-5 mb-5'>
+            <div className='mx-4 lg:mx-12 my-5'>
+              <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
                 <button>
-                  <Link to={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-4 py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</Link>
+                  <Link to={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</Link>
                 </button>
                 <button>
-                  <Link to={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-4 py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</Link>
+                  <Link to={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</Link>
                 </button>
               </div>
               <div className='tracking-wider text-xl'>

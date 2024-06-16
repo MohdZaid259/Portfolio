@@ -16,32 +16,14 @@ import mysql from '../Media/skills/mysql.png'
 import mongodb from '../Media/skills/mongodb.png' 
 import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
-import '../style.css'
 
 function Skills() {
   const img = [
     html,css,atom,redux,tailwind,nodejs,appwrite,express,framer,js,cpp,java,c,mysql,mongodb,git,github
   ]
 
-  useEffect(()=>{
-    for(let i=0;i<10;i++){
-      const box = document.createElement('div')
-      box.className='box absolute'
-      const size = Math.random() * (30 - 10) + 15;
-      box.style.width = `${size}px`
-      box.style.height = `${size}px`
-      const randomX = Math.random() * (window.innerWidth/2 - size);
-      const randomY = Math.random() * (window.innerHeight*4/5 - size);
-      box.style.left = `${randomX}px`;
-      box.style.top = `${randomY}px`;
-      box.style.marginTop = '7rem'
-      box.style.marginLeft = '3rem'
-      shapeContainer.appendChild(box)
-    }
-  },[])
-
   return (
-    <div className='h-full flex p-10 gap-5 bg-gradient-to-br from-blue-400 via-blue-200 to-pink-100 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='h-full flex p-10 gap-5 bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <div id='shapeContainer' className='flex gap-3 flex-wrap w-3/5'>
       {img.map((item,id)=>{
         return <>
