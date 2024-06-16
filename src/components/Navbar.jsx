@@ -6,11 +6,6 @@ import menu from '../Media/menu.png'
 import close from '../Media/close.png'
 
 export default function Header() {
-
-  const headerstyle = {
-    boxShadow: '0 0 25px rgba(107, 114, 128, 0.5)'
-  };
-
   const [ham, setHam] = useState(false);
   const handleHam = () => setHam(!ham); 
 
@@ -34,8 +29,8 @@ export default function Header() {
   ]
 
   return (
-      <div className="flex justify-around items-center bg-teal-400 py-4 dark:bg-gradient-to-r from-black via-gray-950 to-gray-900 tracking-wider" style={headerstyle}>
-          <Link to='/'><img className="w-12" src={z} alt="" /></Link>
+      <div className="flex drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.15)] justify-around items-center py-4 bg-gradient-to-r from-blue-400 via-blue-200 to-red-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 tracking-wider" >
+          <Link to='/'><img className="w-12 invert dark:invert-0" src={z} alt="" /></Link>
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
@@ -53,11 +48,11 @@ export default function Header() {
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-150 ease-in-out`}
             >
             {navItems.map((item,id)=>(
-              <NavLink key={id} className={({isActive})=>`${isActive?'text-green-400 underline':''} mx-3 hover:underline text-xl underline-offset-4`} to={item.slug}>{item.name}</NavLink>
+              <NavLink key={id} className={({isActive})=>`${isActive?'dark:text-green-400 text-pink-700 underline':''} mx-3 hover:underline text-xl underline-offset-4`} to={item.slug}>{item.name}</NavLink>
             ))}
-            <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md bg-green-600 px-2 py-0.5 hover:bg-green-700 text-xl`} to='/contact'>Contact Me</NavLink>
+            <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl`} to='/contact'>Contact Me</NavLink>
             </ul>
-            <div className="ml-2"><ThemeProvider><Switcher/></ThemeProvider></div>
+            <div className="ml-2 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>
       </div>
   )

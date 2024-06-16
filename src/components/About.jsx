@@ -9,19 +9,19 @@ export default function About() {
   };
 
   return (
-    <div className='flex h-full gap-7 justify-center bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white'>
+    <div className='flex h-full gap-7 justify-center bg-gradient-to-br from-blue-400 via-blue-200 to-pink-100 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <div className='flex flex-col pl-16 justify-center items-start '>
-        <h1 className='text-5xl -mt-10 mb-10 font-bold text-green-400'># know me</h1>
-        <p className='w-2/3 pr-20 text-2xl'>
-          <img className='inline w-8' src={qopen} style={style} alt=""/>
-          <p className='inline ml-6'>I'm Mohd Zaid, a dedicated computer applications student with a forte for coding and a relentless drive for web game development.<br/><br/></p>
+        <h1 className='text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># know me</h1>
+        <p className='w-2/3 pr-20 text-xl'>
+          <img className='inline w-8 dark:invert-0 invert' src={qopen} alt=""/>
+          <p className='inline ml-6'>Hii, I'm Zaid, a Full-stack developer with a passion for building high-quality web applications. I specialize in using ReactJS, NextJS, and Tailwind CSS on the frontend, and NodeJS, Express, and MongoDB on the backend.<br/><br/></p>
           <p className='inline ml-6'>
-          Beyond the digital landscape, I derive immense joy from photography and the art of creative editing. I thrive on tackling complex problems as they fuel my drive for personal and academic growth. <br/><br/></p>
+          I believe in creating websites that look great and perform exceptionally. Whether it's designing responsive layouts, optimizing performance, or developing robust backends, I strive to deliver top-notch results.<br/><br/></p>
           <p className='inline ml-6 mr-6'>
-          Discipline, honesty, and unwavering consistency are my guiding principles, and my ultimate aspiration is to leave an indelible mark in the realms of technology and creativity.</p>
-          <img className='inline w-8' src={qclose} style={style} alt=""/>
+          If you need a developer skilled in the latest technologies with a strong design sense, let's chat about your project and how I can help bring your vision to life.</p>
+          <img className='inline w-8 dark:invert-0 invert' src={qclose} alt=""/>
         </p>
-        <img className='ml-32rem' src={signatureop} style={style} alt=""/>
+        <img className='ml-32rem mt-7 dark:invert-0 invert' src={signatureop} alt=""/>
       </div>
     </div>
   )

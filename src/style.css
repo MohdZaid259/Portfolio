@@ -1,6 +1,12 @@
-.box{
-  background-color: rgba(10, 9, 9, 0);
+.dark .box{
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgb(0, 143, 93);
+  border-radius: 50%;
+  text-align: center;
+}
+.box{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(139, 1, 74);
   border-radius: 50%;
   text-align: center;
 }

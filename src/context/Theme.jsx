@@ -3,7 +3,7 @@ import brightness from '../Media/brightness.png'
 const themeContext=createContext()
 
 function ThemeProvider({children}) {
-  const [theme,setTheme]=useState('light')
+  const [theme,setTheme]=useState('dark')
 
   useEffect(()=>{
     document.querySelector('html').classList.remove("light", "dark")

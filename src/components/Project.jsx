@@ -52,7 +52,7 @@ function Project() {
   };
 
   return (
-    <div className='bg-gradient-to-tr overflow-auto scrollbar-hide h-full px-10 pt-2 from-black via-gray-950 to-gray-800 text-white'>
+    <div className='bg-teal-400 overflow-auto scrollbar-hide h-full px-10 pt-2 bg-gradient-to-br from-blue-400 via-blue-200 to-pink-100 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
@@ -84,14 +84,14 @@ function Project() {
             <div className='mx-12 my-5'>
               <div className='flex gap-5 mx-6 mt-5 mb-5'>
                 <button>
-                  <Link to={project.github} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Github</Link>
+                  <Link to={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-4 py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</Link>
                 </button>
                 <button>
-                  <Link to={project.liveDemo} target="_blank" className="border-2 border-green-500 px-4 py-2 text-lg rounded hover:bg-green-600 duration-150">Live Demo</Link>
+                  <Link to={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-4 py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</Link>
                 </button>
               </div>
               <div className='tracking-wider text-xl'>
-                <span className='text-3xl font-bold text-green-400'>{project.title} : </span>
+                <span className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </span>
                 <span className='text-2xl font-semibold'>{project.subtitle}</span>
                 <span className='inline-block mt-3'>{project.description}</span>
               </div>

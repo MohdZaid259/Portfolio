@@ -41,11 +41,11 @@ function Skills() {
   },[])
 
   return (
-    <div className='h-full flex p-10 gap-5 bg-gradient-to-tr from-black  via-gray-950 to-gray-800 text-white'>
+    <div className='h-full flex p-10 gap-5 bg-gradient-to-br from-blue-400 via-blue-200 to-pink-100 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <div id='shapeContainer' className='flex gap-3 flex-wrap w-3/5'>
       {img.map((item,id)=>{
         return <>
-        <img key={id} className='p-2 border border-green-400 rounded-full w-16 h-16' src={item} alt="" />
+          <img key={id} className='p-2 border border-pink-700 dark:border-green-400 rounded-full w-16 h-16' src={item} alt=""/>
         </>
       })}
       </div>
@@ -53,8 +53,8 @@ function Skills() {
         <div className='flex flex-col w-full flex-wrap gap-5'>
           <div className='flex justify-around'>
             <div>
-              <div className='text-2xl font-semibold -mx-3 text-green-400'>Frontend</div>
-                <div className='flex flex-col -mx-3'>
+              <div className='text-2xl font-semibold -mx-1 text-pink-700 dark:text-green-400'>Frontend</div>
+                <div className='flex flex-col -mx-1'>
                   <span className='text-lg'>HTML 5</span>        
                   <span className='text-lg'>CSS 3</span>        
                   <span className='text-lg'>ReactJs</span>        
@@ -64,7 +64,7 @@ function Skills() {
                 </div>
             </div>
             <div>
-              <div className='text-2xl font-semibold text-green-400'>Backend</div>
+              <div className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Backend</div>
                 <div className='flex flex-col'>
                   <span className='text-lg'>NodeJs</span>
                   <span className='text-lg'>Express</span>
@@ -74,23 +74,22 @@ function Skills() {
           </div>
           <div className='mx-20 flex flex-col gap-5'>
           <div className=''>
-            <span className='text-2xl font-semibold text-green-400'>Languages known</span>
+            <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Languages known</span>
             <div className='flex flex-col'>
               <span className='text-lg'>Javascript</span>
               <span className='text-lg'>Python</span>
-              <span className='text-lg'>C</span>
               <span className='text-lg'>C++</span>
             </div>
           </div>
           <div className=''>
-            <span className='text-2xl font-semibold text-green-400'>Database Management</span>
+            <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Database Management</span>
             <div className='flex flex-col'>
               <span className='text-lg'>MongoDb</span>
               <span className='text-lg'>MySQL</span>
             </div>
           </div>
           <div className=''>
-            <span className='text-2xl font-semibold text-green-400'>Version Control</span>
+            <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Version Control</span>
             <div className='flex flex-col'>
               <span className='text-lg'>GitHub</span>
               <span className='text-lg'>Git</span>
