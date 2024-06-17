@@ -13,7 +13,7 @@ function Contact() {
   }
 
   return (
-      <div className='bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full md:flex justify-around items-center px-10'>
+      <div className='bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full md:flex justify-around items-center px-10'>
       <div className='flex flex-col gap-1 md:gap-3 mt-10'>
         <h2 className='text-xl md:text-3xl font-bold '>Let's <span className='text-pink-600 dark:text-green-500'>Chat</span>.</h2>
         <h2 className='text-xl md:text-3xl font-bold mb-5'>Tell me about your project.</h2>

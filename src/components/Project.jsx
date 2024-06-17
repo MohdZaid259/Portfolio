@@ -52,7 +52,7 @@ function Project() {
   };
 
   return (
-    <div className='bg-teal-400 overflow-auto scrollbar-hide h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='overflow-auto scrollbar-hide h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];

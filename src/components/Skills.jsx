@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import html from '../Media/skills/html.png' 
 import css from '../Media/skills/css.png' 
 import atom from '../Media/skills/atom.png' 
@@ -11,26 +11,33 @@ import framer from '../Media/skills/framer.png'
 import js from '../Media/skills/js.png' 
 import cpp from '../Media/skills/cpp.png' 
 import java from '../Media/skills/java.png' 
-import c from '../Media/skills/c.png' 
 import mysql from '../Media/skills/mysql.png' 
 import mongodb from '../Media/skills/mongodb.png' 
 import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
+import '../style.css'
 
 function Skills() {
   const img = [
-    html,css,atom,redux,tailwind,nodejs,appwrite,express,framer,js,cpp,java,c,mysql,mongodb,git,github
+    html,css,atom,redux,tailwind,nodejs,appwrite,express,framer,js,cpp,java,mysql,mongodb,git,github
   ]
+  const totalCells = 6 * 6;
+  const gridCells = Array.from({ length: totalCells }, (_, index) => index);
 
   return (
-    <div className='h-full flex p-10 gap-5 bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
-      <div id='shapeContainer' className='flex gap-3 flex-wrap w-3/5'>
-      {img.map((item,id)=>{
-        return <>
-          <img key={id} className='p-2 border border-pink-700 dark:border-green-400 rounded-full w-16 h-16' src={item} alt=""/>
-        </>
-      })}
-      </div>
+    <div className='h-full flex p-10 gap-5 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+        <div id="shapeContainer" className="p-10 -mt-5 grid grid-cols-7 grid-rows-4 w-3/5">
+            {gridCells.map((cellIndex) => {
+                const isImageCell = cellIndex % 2 === 0;
+                return (
+                    <div key={cellIndex}>
+                        {isImageCell && img[cellIndex / 2] && (
+                            <img src={img[cellIndex / 2]} alt="" className="p-2 border border-pink-700 dark:border-green-400 rounded-full w-16 h-16" />
+                        )}
+                    </div>
+                );
+            })}
+        </div>
       <div className='flex flex-1'>
         <div className='flex flex-col w-full flex-wrap gap-5'>
           <div className='flex justify-around'>

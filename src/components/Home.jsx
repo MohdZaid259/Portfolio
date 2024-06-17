@@ -20,7 +20,7 @@ function Home() {
     }, []);
 
   return (
-    <div className='bg-gradient-to-br from-blue-500 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full md:flex justify-center m-auto'>
+    <div className='bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full md:flex justify-center m-auto'>
       <div className='flex flex-1 flex-col justify-center pl-5 sm:pl-10 md:pl-16'>
         <h3 className='pt-5 text-sm sm:text-lg md:text-2xl'>Hi, There!</h3>
         <h1 className='py-3 font-extrabold text-xl sm:text-2xl md:text-5xl'>I am <span ref={element} className="dark:text-green-500 text-pink-600">Mohd Zaid.</span></h1>
