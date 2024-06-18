@@ -56,7 +56,7 @@ function Skills() {
   }
 
   return (
-    <div className='h-full p-10 gap-5 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='h-full p-10 gap-5 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <h1 className='px-2 sm:pl-5 md:px-12 text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Skills</h1>
       <div className='flex'>
         <motion.div initial='hidden' whileInView='visible' variants={variants} id="shapeContainer" className="p-10 -mt-5  grid grid-cols-7 grid-rows-4 w-3/5">
@@ -79,7 +79,7 @@ function Skills() {
                   <motion.div initial='hidden' whileInView='visible' variants={textVariants} className='flex flex-col -mx-1'>
                   {skills[0].map((item,i)=>{
                     return (
-                      <motion.span variants={textVariants} custom={i}>{item}</motion.span>
+                      <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
                     )
                   })}
                   </motion.div>
@@ -89,7 +89,7 @@ function Skills() {
                   <motion.div initial='hidden' whileInView='visible' variants={textVariants}  className='flex flex-col'>
                   {skills[1].map((item,i)=>{
                     return (
-                      <motion.span variants={textVariants} custom={i}>{item}</motion.span>
+                      <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
                     )
                   })}
                   </motion.div>
@@ -101,7 +101,7 @@ function Skills() {
               <motion.div initial='hidden' whileInView='visible' variants={textVariants} className='flex flex-col'>
                 {skills[2].map((item,i)=>{
                   return (
-                    <motion.span variants={textVariants} custom={i}>{item}</motion.span>
+                    <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
                   )
                 })}
               </motion.div>
@@ -111,7 +111,7 @@ function Skills() {
               <motion.div initial='hidden' whileInView='visible' variants={textVariants}  className='flex flex-col'>
                 {skills[3].map((item,i)=>{
                   return (
-                    <motion.span variants={textVariants} custom={i}>{item}</motion.span>
+                    <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
                   )
                 })}
               </motion.div>
@@ -121,7 +121,7 @@ function Skills() {
               <div className='flex flex-col'>
                 {skills[4].map((item,i)=>{
                   return (
-                    <motion.span variants={textVariants} custom={i}>{item}</motion.span>
+                    <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
                   )
                 })}
               </div>

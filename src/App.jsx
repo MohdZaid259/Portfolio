@@ -11,11 +11,11 @@ function App() {
   return (
     <div className='overflow-y-auto scroll-smooth no-scrollbar'>
       <Navbar/>
-      <Home className='snap-mandatory snap-y snap-center'/>
-      <About className='snap-mandatory snap-y snap-center'/>
-      <Skills className='snap-mandatory snap-y snap-center'/>
-      <Project className='snap-mandatory snap-y snap-center'/>
-      <Contact className='snap-mandatory snap-y snap-center'/>
+      <Home className='snap-mandatory h-screen snap-y snap-center'/>
+      <About className='snap-mandatory h-screen snap-y snap-center'/>
+      <Skills className='snap-mandatory h-screen snap-y snap-center'/>
+      <Project className='snap-mandatory h-screen snap-y snap-center'/>
+      <Contact className='snap-mandatory h-screen snap-y snap-center'/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ import bloggerhero from '../Media/showoff/bloggerhero.png';
 import blogger1 from '../Media/showoff/blogger1.png';
 import blogger2 from '../Media/showoff/blogger2.png';
 import blogger3 from '../Media/showoff/blogger3.png';
-import { motion, stagger } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -59,7 +59,7 @@ function Project() {
     },
     hidden:{
       opacity:0,
-      x:500
+      x:100
     }
   }
   const variants = {
@@ -77,7 +77,7 @@ function Project() {
   }
 
   return (
-    <div className='h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <h1 className='px-2 sm:pl-5 md:px-12 text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Projects</h1>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
@@ -114,10 +114,10 @@ function Project() {
             <div className='mx-4 lg:mx-12 my-5'>
               <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
                 <button>
-                  <Link to={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</Link>
+                  <a href={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</a>
                 </button>
                 <button>
-                  <Link to={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</Link>
+                  <a href={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</a>
                 </button>
               </div>
               <div className='tracking-wider text-xl'>

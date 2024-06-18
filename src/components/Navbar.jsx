@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import { NavLink,Link } from "react-router-dom";
 import { ThemeProvider,Switcher } from '../context/Theme'
 import z from '../Media/z.png'
 import menu from '../Media/menu.png'
@@ -30,10 +29,10 @@ export default function Header() {
   ]
 
   return (
-      <div className="flex drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.15)] justify-around items-center py-3 bg-gradient-to-r from-fuchsia-400 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 tracking-normal md:tracking-wider">
-          <Link to='/'>
+      <div className="sticky flex drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.15)] justify-around items-center py-3 bg-gradient-to-r from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 tracking-normal md:tracking-wider">
+          <a href='/'>
             <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
-          </Link>
+          </a>
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
@@ -51,9 +50,9 @@ export default function Header() {
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-150 ease-in-out`}
             >
             {navItems.map((item,id)=>(
-              <NavLink key={id} className={({isActive})=>`${isActive?'dark:text-green-400 text-pink-600 underline':''} mx-3 hover:underline text-xl underline-offset-4`} to={item.slug}>{item.name}</NavLink>
+              <a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a>
             ))}
-            <NavLink className={({isActive})=>`${isActive?'bg-green-700':''} mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl`} to='/contact'>Contact Me</NavLink>
+              <a href='/contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
             </ul>
             <div className="ml-2 w-8 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>
