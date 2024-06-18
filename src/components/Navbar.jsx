@@ -4,6 +4,7 @@ import { ThemeProvider,Switcher } from '../context/Theme'
 import z from '../Media/z.png'
 import menu from '../Media/menu.png'
 import close from '../Media/close.png'
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [ham, setHam] = useState(false);
@@ -30,7 +31,9 @@ export default function Header() {
 
   return (
       <div className="flex drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.15)] justify-around items-center py-3 bg-gradient-to-r from-fuchsia-400 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 tracking-normal md:tracking-wider">
-          <Link to='/'><img className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" /></Link>
+          <Link to='/'>
+            <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
+          </Link>
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (

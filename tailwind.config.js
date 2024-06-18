@@ -13,16 +13,18 @@ export default {
       },
       margin: {
         '32rem': '32rem',
-      }
+      },
     },
   },
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        '.scrollbar-hide': {
-          '&::-webkit-scrollbar': {
-            display: 'none',
-          },
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none',  
+          'scrollbar-width': 'none',     
+        },
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none',  
         },
       });
     },

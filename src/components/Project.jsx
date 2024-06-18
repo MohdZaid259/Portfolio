@@ -8,6 +8,7 @@ import bloggerhero from '../Media/showoff/bloggerhero.png';
 import blogger1 from '../Media/showoff/blogger1.png';
 import blogger2 from '../Media/showoff/blogger2.png';
 import blogger3 from '../Media/showoff/blogger3.png';
+import { motion, stagger } from 'framer-motion';
 
 const projects = [
   {
@@ -28,10 +29,6 @@ const projects = [
   }
 ];
 
-const style = {
-  boxShadow: '0 0 15px rgba(107, 114, 128, 0.5)',
-};
-
 function Project() {
   const [mainImageIndices, setMainImageIndices] = useState(Array(projects.length).fill(0));
 
@@ -47,30 +44,63 @@ function Project() {
     setMainImageIndices(prevIndices => {
       const newIndices = [...prevIndices];
       newIndices[projectIndex] = subImageIndex;
-      return newIndices;
+      return newIndices;c
     });
   };
 
+  const projectVarient = {
+    visible:{
+      opacity:1,
+      x:0,
+      transition:{
+        staggerChildren: 0.3,
+        ease:'easeInOut'
+      }
+    },
+    hidden:{
+      opacity:0,
+      x:500
+    }
+  }
+  const variants = {
+    visible:{
+      opacity:1,
+      y:0,
+      transition:{
+        duration:0.5
+      }
+    },
+    hidden:{
+      opacity:0,
+      y:50
+    }
+  }
+
   return (
-    <div className='overflow-auto scrollbar-hide h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-fuchsia-300 via-blue-300 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+      <h1 className='px-2 sm:pl-5 md:px-12 text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Projects</h1>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
         return (
           <div key={projectIndex} className='mb-20'>
             <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
-              <div className='h-full flex-1' style={style}>
-                <img 
+              <div className='h-full flex-1'>
+                <motion.img
+                  initial={{opacity:0,x:-500}}
+                  whileInView={{opacity:1,x:0}}
+                  transition={{duration:0.7}}
                   className='rounded-md transition-opacity duration-1000' 
                   src={mainImage} 
                   alt={project.title} 
                 />
               </div>
-              <div className='h-auto flex flex-col items-center -mt-1 gap-2 flex-[0.32]'>
+              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto  flex flex-col items-center -mt-1 lg:gap-3 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
-                    <div key={subImageIndex} className='rounded-md w-full' style={style}>
-                      <img
+                    <div key={subImageIndex} className='rounded-md w-full'>
+                      <motion.img
+                        variants={projectVarient}
                         className='rounded-md aspect-video transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}
@@ -79,7 +109,7 @@ function Project() {
                     </div>
                   )
                 ))}
-              </div>
+              </motion.div>
             </div>
             <div className='mx-4 lg:mx-12 my-5'>
               <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
@@ -91,9 +121,9 @@ function Project() {
                 </button>
               </div>
               <div className='tracking-wider text-xl'>
-                <span className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </span>
-                <span className='text-2xl font-semibold'>{project.subtitle}</span>
-                <span className='inline-block mt-3'>{project.description}</span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants} className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </motion.span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants} className='text-2xl font-semibold'>{project.subtitle}</motion.span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants} className='inline-block mt-3 pb-3'>{project.description}</motion.span>
               </div>
             </div>
           </div>
