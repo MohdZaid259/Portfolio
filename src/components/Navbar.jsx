@@ -36,9 +36,9 @@ export default function Header() {
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
-                <img className="w-4 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
+                <img className="w-6 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
               ) : (
-                <img className="w-5 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
+                <img className="w-7 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
               )}
             </div>
             <ul

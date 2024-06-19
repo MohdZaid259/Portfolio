@@ -89,7 +89,7 @@ function Project() {
                   initial={{opacity:0,x:-100}}
                   whileInView={{opacity:1,x:0}}
                   transition={{duration:0.7}}
-                  className='rounded-md transition-opacity duration-1000' 
+                  className='border border-black rounded-md transition-opacity duration-1000' 
                   src={mainImage} 
                   alt={project.title} 
                 />
@@ -98,9 +98,8 @@ function Project() {
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex} className='rounded-md w-full'>
-                      <motion.img
-                        variants={projectVarient}
-                        className='rounded-md aspect-video transition-opacity duration-1000'
+                      <img
+                        className='border border-black rounded-md aspect-video transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}
                         alt={project.title}
