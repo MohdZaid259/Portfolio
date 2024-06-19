@@ -25,7 +25,7 @@ function Contact() {
 
   return (
       <div id='contact' className=' bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full px-10 py-10'>
-      <h1 className='text-xl -ml-4 md:px-10 md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Contact Me</h1>
+      <h1 className='-ml-4 md:px-10 text-2xl md:text-3xl  lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Contact Me</h1>
       <div className='md:flex justify-around items-center'>
       <div className='flex flex-col gap-1 md:gap-3 mt-10'>
         <h2 className='text-xl md:text-3xl font-bold '>Let's <span className='text-pink-600 dark:text-green-500'>Chat</span>.</h2>

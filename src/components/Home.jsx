@@ -39,13 +39,13 @@ function Home() {
   return (
       <div className='h-full bg-gradient-to-br py-10 from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full md:flex justify-center m-auto'>
       <div className='flex flex-1 flex-col justify-center pl-5 sm:pl-10 md:pl-16'>
-        <motion.h3 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='pt-5 text-sm sm:text-lg md:text-2xl'>Hi, There!</motion.h3>
-        <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:0.5}} className='py-3 font-extrabold text-xl sm:text-2xl md:text-5xl'>I am <span ref={element} className="dark:text-green-500 text-pink-600"></span></motion.h1>
-        <motion.p initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:1}} className='text-sm pr-2 sm:text-lg md:text-xl w-full'><span ref={desc}></span></motion.p>
+        <motion.h3 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='pt-5 text-base sm:text-lg md:text-2xl'>Hi, There!</motion.h3>
+        <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:0.5}} className='py-3 font-extrabold text-2xl sm:text-3xl md:text-5xl'>I am <span ref={element} className="dark:text-green-500 text-pink-600"></span></motion.h1>
+        <motion.p initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:1}} className='text-base pr-2 sm:text-lg md:text-xl w-full'><span ref={desc}></span></motion.p>
         <motion.div initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:1.5}} className="flex gap-5">
-          <a href="https://x.com/zaidrazvi09" target='_blank'><img className='dark:invert w-5 md:w-7 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
-          <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" target='_blank'><img className='dark:invert w-5 md:w-7 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>
-          <a href="https://github.com/MohdZaid259" target='_blank'><img className='dark:invert w-6 md:w-8 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></a>
+          <a href="https://x.com/zaidrazvi09" target='_blank'><img className='dark:invert w-7 md:w-8 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
+          <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" target='_blank'><img className='dark:invert w-7 md:w-8 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>
+          <a href="https://github.com/MohdZaid259" target='_blank'><img className='dark:invert w-8 md:w-9 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></a>
         </motion.div>
         <motion.a href={resume_fullStack} download initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:2}} className='my-2 dark:bg-green-500 bg-pink-600 dark:hover:bg-green-600 hover:bg-pink-700 text-white rounded-lg w-fit px-2 py-1 text-base sm:text-lg md:text-xl'>Download CV</motion.a>
       </div>
