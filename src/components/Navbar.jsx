@@ -29,7 +29,7 @@ export default function Header() {
   ]
 
   return (
-      <div className="fixed w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider">
+      <div className="fixed w-full z-10 flex justify-evenly items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider">
           <a href='/'>
             <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
