@@ -37,7 +37,7 @@ function Home() {
     }
 
   return (
-      <div className='h-full bg-gradient-to-br py-10 from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full md:flex justify-center m-auto'>
+      <section className='h-full bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full md:flex justify-center m-auto'>
       <div className='flex flex-1 flex-col justify-center pl-5 pt-10 sm:pl-10 md:pl-16'>
         <motion.h3 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='pt-5 text-base sm:text-lg md:text-2xl'>Hi, There!</motion.h3>
         <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:0.5}} className='py-3 font-extrabold text-2xl sm:text-3xl md:text-5xl'>I am <span ref={element} className="dark:text-green-500 text-pink-600"></span></motion.h1>
@@ -52,7 +52,7 @@ function Home() {
       <div className='flex flex-1  items-center m-auto'>
         <motion.img initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} className='md:pl-10 h-1/6 md:h-2/5 lg:h-3/4 w-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0_20px_rgba(225,225,225,0.25)]' src={hero} alt="" />
       </div>
-    </div>
+    </section>
   )
 }
 

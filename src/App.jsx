@@ -9,14 +9,24 @@ import Contact from './components/Contact'
 function App() {
 
   return (
-    <div>
+    <>
       <Navbar/>
-      <Home />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
-    </div>
+      <section className='h-full w-full' id='home'>
+        <Home/>
+      </section>
+      <section className='h-full w-full' id='about'>
+        <About />
+      </section>
+      <section className='h-full w-full' id='skills'>
+        <Skills />
+      </section>
+      <section className='h-full w-full' id='projects'>
+        <Project />
+      </section>
+      <section className='h-full w-full' id='contact'>
+        <Contact />
+      </section>
+    </>
   )
 }
 
