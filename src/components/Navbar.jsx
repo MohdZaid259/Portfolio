@@ -29,7 +29,7 @@ export default function Header() {
   ]
 
   return (
-      <div className="fixed w-full z-10 flex justify-evenly items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider">
+      <div className="fixed w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider">
           <a href='/'>
             <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
@@ -45,7 +45,7 @@ export default function Header() {
               onClick={handleHam}
               className={`dark:bg-inherit dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-2 ${
                 ham
-                  ? "opacity-100 translate-y-0 -translate-x-20 backdrop-blur-sm"
+                  ? "opacity-100 translate-y-0 backdrop-blur-sm"
                   : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
             >
