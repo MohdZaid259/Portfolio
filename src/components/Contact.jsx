@@ -6,7 +6,7 @@ import linkedin from '../Media/linkedin.png'
 import twitter from '../Media/twitter.png'
 import paperplane from '../Media/paperplane.png'
 import location from '../Media/location.png'
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function Contact() {
   const handleSubmit=()=>{

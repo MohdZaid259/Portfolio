@@ -7,7 +7,7 @@ export default function About() {
 
   return (
     <div className='flex h-auto gap-7 justify-center bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
-      <div className='md:flex m-auto md:flex-col px-3 sm:pl-8 md:px-16 justify-center items-start '>
+      <div className='md:flex m-auto md:flex-col px-5 sm:pl-8 md:px-16 justify-center items-start '>
         <h1 className='text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># know me</h1>
         <p className='w-full text-base sm:text-lg md:text-xl'>
           <img className='inline w-4 md:w-8 dark:invert-0 invert' src={qopen} alt=""/>

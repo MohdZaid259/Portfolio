@@ -43,11 +43,11 @@ export default function Header() {
             </div>
             <ul
               onClick={handleHam}
-              className={`dark:bg-inherit dark:text-white sm:text-base sm:bg-transparent w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-4 ${
+              className={`dark:bg-inherit dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-2 ${
                 ham
-                  ? "opacity-100 translate-y-0 "
+                  ? "opacity-100 translate-y-0 backdrop-blur-3xl"
                   : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
-              } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-150 ease-in-out`}
+              } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
             >
             {navItems.map((item,id)=>(
               <a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a>

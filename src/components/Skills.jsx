@@ -56,16 +56,16 @@ function Skills() {
   }
 
   return (
-    <div className='h-full p-10 gap-5 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div className='h-full p-5 gap-5 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <h1 className='px-2 sm:pl-5 md:px-12 text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Skills</h1>
-      <div className='flex'>
-        <motion.div initial='hidden' whileInView='visible' variants={variants} id="shapeContainer" className="p-10 -mt-5  grid grid-cols-7 grid-rows-4 w-3/5">
+      <div className='flex flex-col md:flex-row '>
+        <motion.div initial='hidden' whileInView='visible' variants={variants} id="shapeContainer" className="p-10 -mt-5 grid grid-cols-7 grid-rows-4 w-full md:w-3/5">
               {gridCells.map((cellIndex) => {
                   const isImageCell = cellIndex % 2 === 0;
                   return (
                       <motion.div variants={variants} key={cellIndex}>
                           {isImageCell && img[cellIndex / 2] && (
-                              <img src={img[cellIndex / 2]} alt="" className="p-2 border border-pink-700 dark:border-green-400 rounded-full w-16 h-16" />
+                              <img src={img[cellIndex / 2]} alt="" className="p-1 md:p-2 border border-pink-700 dark:border-green-400 rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
                           )}
                       </motion.div>
                   );
@@ -73,10 +73,10 @@ function Skills() {
         </motion.div>
         <div className='flex flex-1'>
           <div className='flex flex-col w-full flex-wrap gap-5'>
-            <div className='flex justify-around'>
+            <div className='flex justify-between sm:justify-around'>
               <div>
-                <div className='text-2xl font-semibold -mx-1 text-pink-700 dark:text-green-400'>Frontend</div>
-                  <motion.div initial='hidden' whileInView='visible' variants={textVariants} className='flex flex-col -mx-1'>
+                <div className='text-xl md:text-2xl font-semibold  text-pink-700 dark:text-green-400'>Frontend</div>
+                  <motion.div initial='hidden' whileInView='visible' variants={textVariants} className='flex flex-col'>
                   {skills[0].map((item,i)=>{
                     return (
                       <motion.span key={i} variants={textVariants} custom={i}>{item}</motion.span>
@@ -85,7 +85,7 @@ function Skills() {
                   </motion.div>
               </div>
               <div>
-                <div className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Backend</div>
+                <div className='text-xl md:text-2xl font-semibold text-pink-700 dark:text-green-400'>Backend</div>
                   <motion.div initial='hidden' whileInView='visible' variants={textVariants}  className='flex flex-col'>
                   {skills[1].map((item,i)=>{
                     return (
@@ -95,9 +95,9 @@ function Skills() {
                   </motion.div>
               </div>
             </div>
-            <div className='mx-20 flex flex-col gap-5'>
+            <div className='mx-0 md:mx-20 flex flex-col gap-5'>
             <div className=''>
-              <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Languages known</span>
+              <span className='text-xl md:text-2xl font-semibold text-pink-700 dark:text-green-400'>Languages known</span>
               <motion.div initial='hidden' whileInView='visible' variants={textVariants} className='flex flex-col'>
                 {skills[2].map((item,i)=>{
                   return (
@@ -107,7 +107,7 @@ function Skills() {
               </motion.div>
             </div>
             <div className=''>
-              <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Database Management</span>
+              <span className='text-xl md:text-2xl font-semibold text-pink-700 dark:text-green-400'>Database Management</span>
               <motion.div initial='hidden' whileInView='visible' variants={textVariants}  className='flex flex-col'>
                 {skills[3].map((item,i)=>{
                   return (
@@ -117,7 +117,7 @@ function Skills() {
               </motion.div>
             </div>
             <motion.div initial='hidden' whileInView='visible' variants={textVariants}  className=''>
-              <span className='text-2xl font-semibold text-pink-700 dark:text-green-400'>Version Control</span>
+              <span className='text-xl md:text-2xl font-semibold text-pink-700 dark:text-green-400'>Version Control</span>
               <div className='flex flex-col'>
                 {skills[4].map((item,i)=>{
                   return (
