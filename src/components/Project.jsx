@@ -82,14 +82,14 @@ function Project() {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
         return (
-          <div key={projectIndex} className=''>
+          <div key={projectIndex}>
             <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
               <div className='h-full flex-1'>
                 <motion.img
                   initial={{opacity:0,x:-100}}
                   whileInView={{opacity:1,x:0}}
                   transition={{duration:0.7}}
-                  className='border border-black rounded-md transition-opacity duration-1000' 
+                  className='border border-black rounded-sm transition-opacity duration-1000' 
                   src={mainImage} 
                   alt={project.title} 
                 />
@@ -97,9 +97,9 @@ function Project() {
               <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto  flex flex-col items-center -mt-1 gap-2 lg:gap-3 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
-                    <div key={subImageIndex} className='rounded-md w-full'>
+                    <div key={subImageIndex}>
                       <img
-                        className='border border-black rounded-md aspect-video transition-opacity duration-1000'
+                        className='border border-black rounded-sm aspect-video transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}
                         alt={project.title}

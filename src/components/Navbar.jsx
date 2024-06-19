@@ -54,7 +54,7 @@ export default function Header() {
             ))}
               <a href='#contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
             </ul>
-            <div className="ml-2 w-8 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
+            <div className="ml-2 w-10 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>
       </div>
   )
