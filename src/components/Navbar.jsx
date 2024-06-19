@@ -12,24 +12,24 @@ export default function Header() {
   const navItems=[
     {
       name:'Home',
-      slug:'/'
+      slug:'#'
     },
     {
       name: "About",
-      slug: "/about"
+      slug: "#about"
     },
     {
       name: "Skills",
-      slug: "/skills"
+      slug: "#skills"
     },
     {
       name: "Projects",
-      slug: "/projects"
+      slug: "#projects"
     }
   ]
 
   return (
-      <div className="sticky flex drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.15)] justify-around items-center py-3 bg-gradient-to-r from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 tracking-normal md:tracking-wider">
+      <div className="fixed w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider">
           <a href='/'>
             <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
@@ -45,14 +45,14 @@ export default function Header() {
               onClick={handleHam}
               className={`dark:bg-inherit dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-2 ${
                 ham
-                  ? "opacity-100 translate-y-0 backdrop-blur-3xl"
+                  ? "opacity-100 translate-y-0 backdrop-blur-sm"
                   : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
             >
             {navItems.map((item,id)=>(
               <a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a>
             ))}
-              <a href='/contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
+              <a href='#contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
             </ul>
             <div className="ml-2 w-8 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>

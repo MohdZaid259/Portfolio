@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import ecommercehero from '../Media/showoff/ecommercehero.png';
 import ecommerce1 from '../Media/showoff/ecommerce1.png';
 import ecommerce2 from '../Media/showoff/ecommerce2.png';
@@ -77,17 +76,17 @@ function Project() {
   }
 
   return (
-    <div className='h-full px-2 md:px-4 lg:px-10 pt-2 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
+    <div id='projects' className='h-full px-2 md:px-4 lg:px-10 py-10 bg-gradient-to-br from-green-200 via-green-50 to-green-200 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <h1 className='px-2 sm:pl-5 md:px-12 text-xl md:text-2xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Projects</h1>
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
         return (
-          <div key={projectIndex} className='mb-20'>
+          <div key={projectIndex} className=''>
             <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
               <div className='h-full flex-1'>
                 <motion.img
-                  initial={{opacity:0,x:-500}}
+                  initial={{opacity:0,x:-100}}
                   whileInView={{opacity:1,x:0}}
                   transition={{duration:0.7}}
                   className='rounded-md transition-opacity duration-1000' 
@@ -95,7 +94,7 @@ function Project() {
                   alt={project.title} 
                 />
               </div>
-              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto  flex flex-col items-center -mt-1 lg:gap-3 flex-[0.32]'>
+              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto  flex flex-col items-center -mt-1 gap-2 lg:gap-3 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex} className='rounded-md w-full'>
@@ -111,7 +110,7 @@ function Project() {
                 ))}
               </motion.div>
             </div>
-            <div className='mx-4 lg:mx-12 my-5'>
+            <div className='px-4 lg:px-12'>
               <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
                 <button>
                   <a href={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</a>
