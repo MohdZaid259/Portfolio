@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Cara",
     subtitle: "The ecommerce",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni possimus reprehenderit veniam animi. Accusantium eos et quibusdam laboriosam esse quis asperiores facere recusandae velit eaque maiores atque sequi, error deleniti est quod officia?",
+    description: "I designed and developed 'Cara,' a frontend-based eCommerce website. Using React.js, Tailwind CSS, core JavaScript, and various other libraries, I brought this project to life. 'Cara' was the first fully-fledged website I created, showcasing my skills in modern web development and providing a smooth, user-friendly shopping experience.",
     images: [ecommercehero, ecommerce1, ecommerce2, ecommerce3],
     liveDemo: "https://live-demo-cara.com",
     github: "https://github.com/cara-repo"
@@ -21,7 +21,15 @@ const projects = [
   {
     title: "Blogger",
     subtitle: "The Blogging website",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae magni possimus reprehenderit veniam animi. Accusantium eos et quibusdam laboriosam esse quis asperiores facere recusandae velit eaque maiores atque sequi, error deleniti est quod officia?",
+    description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
+    images: [bloggerhero, blogger1, blogger2, blogger3],
+    liveDemo: "https://live-demo-cara.com",
+    github: "https://github.com/cara-repo"
+  },
+  {
+    title: "Youtube",
+    subtitle: "A Legit Youtube Clone",
+    description: "Built a full-stack web application with Express.js and React.js, seamlessly integrating MongoDB using Mongoose and optimizing for SEO to enhance visibility. Collaborating closely with 3 friends in pair programming sessions, we took Git to the next level, refining our development workflow and achieving outstanding results.",
     images: [bloggerhero, blogger1, blogger2, blogger3],
     liveDemo: "https://live-demo-cara.com",
     github: "https://github.com/cara-repo"
