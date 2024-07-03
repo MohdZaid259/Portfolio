@@ -9,7 +9,7 @@ import Contact from './components/Contact'
 function App() {
 
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar/>
       <section className='h-full w-full' id='home'>
         <Home/>
@@ -26,7 +26,7 @@ function App() {
       <section className='h-full w-full' id='contact'>
         <Contact />
       </section>
-    </>
+    </div>
   )
 }
 
