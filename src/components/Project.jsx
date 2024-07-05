@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Blogger",
-    subtitle: "The Blogging website",
+    subtitle: "Unlock passion",
     description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
     images: [bloggerhero, blogger1, blogger2, blogger3],
     liveDemo: "https://live-demo-cara.com",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Youtube",
-    subtitle: "A Legit Youtube Clone",
+    subtitle: "A legit clone",
     description: "Built a full-stack web application with Express.js and React.js, seamlessly integrating MongoDB using Mongoose and optimizing for SEO to enhance visibility. Collaborating closely with 3 friends in pair programming sessions, we took Git to the next level, refining our development workflow and achieving outstanding results.",
     images: [bloggerhero, blogger1, blogger2, blogger3],
     liveDemo: "https://live-demo-cara.com",

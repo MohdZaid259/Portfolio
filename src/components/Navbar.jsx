@@ -39,11 +39,12 @@ export default function Header() {
           <div className="flex">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
-                <img className="w-6 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
+                <img className="w-5 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
               ) : (
                 <img className="w-7 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
               )}
             </div>
+            <div className="w-full h-auto">
             <ul
               onClick={handleHam}
               className={`dark:bg-inherit dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-2 ${
@@ -56,7 +57,7 @@ export default function Header() {
               <a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a>
             ))}
               <a href='#contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
-            </ul>
+            </ul></div>
             <div className="ml-2 w-10 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>
       </section>
