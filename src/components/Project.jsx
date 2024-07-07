@@ -15,24 +15,24 @@ const projects = [
     subtitle: "The ecommerce",
     description: "I designed and developed 'Cara,' a frontend-based eCommerce website. Using React.js, Tailwind CSS, core JavaScript, and various other libraries, I brought this project to life. 'Cara' was the first fully-fledged website I created, showcasing my skills in modern web development and providing a smooth, user-friendly shopping experience.",
     images: [ecommercehero, ecommerce1, ecommerce2, ecommerce3],
-    liveDemo: "https://live-demo-cara.com",
-    github: "https://github.com/cara-repo"
+    liveDemo: "https://mohdzaid259.github.io/Cara_07/",
+    github: "https://github.com/MohdZaid259/Cara_07.git"
   },
   {
     title: "Blogger",
     subtitle: "Unlock passion",
     description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
     images: [bloggerhero, blogger1, blogger2, blogger3],
-    liveDemo: "https://live-demo-cara.com",
-    github: "https://github.com/cara-repo"
+    liveDemo: "https://flexblogg.vercel.app/",
+    github: "https://github.com/MohdZaid259/Blogger.git"
   },
   {
     title: "Youtube",
     subtitle: "A legit clone",
     description: "Built a full-stack web application with Express.js and React.js, seamlessly integrating MongoDB using Mongoose and optimizing for SEO to enhance visibility. Collaborating closely with 3 friends in pair programming sessions, we took Git to the next level, refining our development workflow and achieving outstanding results.",
     images: [bloggerhero, blogger1, blogger2, blogger3],
-    liveDemo: "https://live-demo-cara.com",
-    github: "https://github.com/cara-repo"
+    liveDemo: "",
+    github: "https://github.com/MohdZaid259/Youtube.git"
   }
 ];
 
@@ -119,17 +119,17 @@ function Project() {
             </div>
             <div className='px-4 lg:px-12'>
               <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
-                <button>
+                <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7}}>
                   <a href={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</a>
-                </button>
-                <button>
+                </motion.button>
+                <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:1}}>
                   <a href={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</a>
-                </button>
+                </motion.button>
               </div>
               <div className='tracking-wider text-xl'>
-                <motion.span initial='hidden' whileInView='visible' variants={variants} className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </motion.span>
-                <motion.span initial='hidden' whileInView='visible' variants={variants} className='text-2xl font-semibold'>{project.subtitle}</motion.span>
-                <motion.span initial='hidden' whileInView='visible' variants={variants} className='inline-block mt-3 pb-3'>{project.description}</motion.span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants} transition={{transition:1,delay:0.5}} className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </motion.span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants} transition={{transition:1,delay:0.7}} className='text-2xl font-semibold'>{project.subtitle}</motion.span>
+                <motion.span initial='hidden' whileInView='visible' variants={variants } transition={{transition:1,delay:0.9}} className='inline-block mt-3 pb-3'>{project.description}</motion.span>
               </div>
             </div>
           </div>

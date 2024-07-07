@@ -22,7 +22,7 @@ function Skills() {
     html,css,atom,redux,tailwind,nodejs,appwrite,express,framer,js,cpp,java,mysql,mongodb,git,github
   ]
   const skills=[
-    ['HTML 5','CSS 3','ReactJs','Redux','Tailwind','Framer'],
+    ['HTML 5','CSS 3','ReactJs','Redux','Tailwind','Framer Motion'],
     ['NodeJs','Express','Appwrite'],
     ['Javascript','Python','c++'],
     ['MongoDb','MySQL'],

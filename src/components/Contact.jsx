@@ -45,7 +45,7 @@ function Contact() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><motion.img initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:1.2}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={paperplane} alt="" /></a>
         </div>
       </div>
-      <motion.div initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}} transition={{duration:0.5}}  className="flex w-full flex-col border-2 border-black dark:border-white -mt-5 md:w-2/6 backdrop-blur-3xl rounded-lg p-4">
+      <motion.div initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}} transition={{duration:1}}  className="flex w-full flex-col border-2 border-black dark:border-white -mt-5 md:w-2/6 backdrop-blur-3xl rounded-lg p-4">
         <h2 className='text-lg md:text-3xl mb-3'>Send us a message</h2>
         <form onSubmit={handleSubmit} className='flex flex-col gap-2' action="">
             <input className='dark:bg-gray-950 p-1 px-2 text-base md:text-lg rounded-md' type="text" placeholder="Full name*"/>
