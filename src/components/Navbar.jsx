@@ -32,11 +32,11 @@ export default function Header() {
   };
 
   return (
-      <section className="fixed top-0 w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider" style={headerstyle}>
+    <section className="fixed top-0 w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider" style={headerstyle}>
           <a href='/'>
             <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
-          <div className="flex">
+          <div className="flex ">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
                 <img className="w-5 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
@@ -46,9 +46,9 @@ export default function Header() {
             </div>
             <ul 
               onClick={handleHam}
-              className={`dark:bg-inherit dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-5 sm:p-0 absolute sm:static top-16 right-2 ${
+              className={` dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-2 sm:p-0 absolute sm:static top-16 right-2 ${
                 ham
-                  ? "opacity-100 translate-y-0 relative"
+                  ? "opacity-100 translate-y-0 bg-black/60"
                   : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
             >
@@ -62,3 +62,4 @@ export default function Header() {
       </section>
   )
 } 
+ 
