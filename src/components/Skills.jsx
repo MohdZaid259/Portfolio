@@ -57,7 +57,7 @@ function Skills() {
 
   return (
     <section className='h-full px-5 py-10 gap-5 bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
-      <h1 className='px-2 sm:pl-5 md:px-12 text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400 dark:drop-shadow-[0_0_5px_rgba(0,0,225,1)]'># Skills</h1>
+      <h1 className='px-2 sm:pl-5 md:px-12 text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Skills</h1>
       <div className='flex flex-col md:flex-row '>
         <motion.div initial='hidden' whileInView='visible' variants={variants} id="shapeContainer" className="p-5 -mt-5 grid grid-cols-7 grid-rows-4 justify-items-center items-center w-full md:w-3/5">
               {gridCells.map((cellIndex) => {
