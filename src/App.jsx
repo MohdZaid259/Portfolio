@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Project from './components/Project'
 import Contact from './components/Contact'
+import Certificate from './components/Certificate'
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
       </section>
       <section className='h-full w-full' id='projects'>
         <Project />
+      </section>
+      <section className='h-full w-full' id='certificates'>
+        <Certificate />
       </section>
       <section className='h-full w-full' id='contact'>
         <Contact />

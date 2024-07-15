@@ -25,6 +25,10 @@ export default function Header() {
     {
       name: "Projects",
       slug: "#projects"
+    },
+    {
+      name: "Certificates",
+      slug: "#certificates"
     }
   ]
   const headerstyle = {
