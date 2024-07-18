@@ -22,8 +22,8 @@ function Switcher(){
   const {theme,toggle}=useContext(themeContext)
 
   return (
-    <button className='text-2xl ml-3 mt-1' onClick={toggle}>
-      {theme==='light'?<img className='w-7 invert' src={brightness}/>:<img className='w-7 invert' src={brightness}/>}
+    <button aria-label='theme' className='text-2xl ml-3 mt-1' onClick={toggle}>
+      {theme==='light'?<img className='w-7 invert' alt='bright' src={brightness}/>:<img className='w-7 invert' alt='dark' src={brightness}/>}
     </button>
   )
 }

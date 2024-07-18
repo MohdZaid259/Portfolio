@@ -37,15 +37,15 @@ export default function Header() {
 
   return (
     <section className="fixed top-0 w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider" style={headerstyle}>
-          <a href='/'>
+          <a href='/' aria-label="home">
             <motion.img loading="lazy" initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
           <div className="flex ">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
-                <img loading="lazy" className="w-5 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
+                <img loading="lazy" className="w-5 h-auto mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
               ) : (
-                <img loading="lazy" className="w-7 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
+                <img loading="lazy" className="w-7 h-auto mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
               )}
             </div>
             <ul 
@@ -57,11 +57,11 @@ export default function Header() {
               } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
             >
             {navItems.map((item,id)=>(
-              <a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a>
+              <li className="list-none"><a key={id} className='active:text-green-500 mx-3 hover:underline text-xl underline-offset-4' href={item.slug}>{item.name}</a></li>
             ))}
               <a href='#contact' className='active:text-green-500 mx-3 rounded-md dark:bg-green-600 text-white px-2 py-0.5 bg-pink-600 hover:bg-pink-700 dark:hover:bg-green-700 text-xl'>Contact Me</a>            
             </ul>
-            <div className="ml-2 w-10 sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
+            <div className="ml-2 w-10 h-auto sm:w-12 invert dark:invert-0"><ThemeProvider><Switcher/></ThemeProvider></div>
           </div>
       </section>
   )

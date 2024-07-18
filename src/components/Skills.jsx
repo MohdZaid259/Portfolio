@@ -50,7 +50,7 @@ function Skills() {
       { 
         opacity: 1, 
         x: 0,  
-        transition:{ delay: i*0.3, easeInOut} 
+        transition:{ delay: i * 0.3, easeInOut} 
       }
     )
   }

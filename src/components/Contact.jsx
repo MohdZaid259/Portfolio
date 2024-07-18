@@ -31,18 +31,18 @@ function Contact() {
         <h2 className='text-xl md:text-3xl font-bold '>Let's <span className='text-pink-600 dark:text-green-500'>Chat</span>.</h2>
         <h2 className='text-xl md:text-3xl font-bold mb-5'>Tell me about your project.</h2>
         <div className="border-b-2 border-l-2 border-pink-600 dark:border-green-400 flex">
-            <img loading='lazy' className='dark:invert w-8 m-4' src={mail} alt=""/>
+            <img loading='lazy' className='dark:invert w-8 h-auto m-4' src={mail} alt=""/>
             <div className="mt-2">
             <p className='font-semibold'>Mail me at</p>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><p className='font-bold text-pink-600 dark:text-green-400'>razvizaid259@gmail.com</p></a>
             </div>
         </div>
         <div className="flex ml-5 mb-10 gap-5">
-            <a href="https://x.com/zaidrazvi09" target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
-            <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.3}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>
-            <a href="https://github.com/MohdZaid259" target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.6}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></a>
-            <a href='https://www.google.co.in/maps/@26.2290722,81.2506927,14.84z?entry=ttu' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.9}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={location} alt="" /></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:1.2}} className='dark:invert w-7 my-2 hover:bg-pink-500 p-1 rounded' src={paperplane} alt="" /></a>
+            <a href="https://x.com/zaidrazvi09" aria-label='twitter' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
+            <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" aria-label='linkedin' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.3}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>
+            <a href="https://github.com/MohdZaid259" aria-label='github' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.6}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={github} alt="" /></a>
+            <a href='https://www.google.co.in/maps/@26.2290722,81.2506927,14.84z?entry=ttu' target='_blank'><motion.img loading='lazy' initial='hidden' aria-label='location' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.9}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={location} alt="" /></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><motion.img loading='lazy' aria-label='mail' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:1.2}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={paperplane} alt="" /></a>
         </div>
       </div>
       <motion.div initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}} transition={{duration:0.5}}  className="flex w-full flex-col border-2 border-black dark:border-white -mt-5 md:w-2/6 backdrop-blur-3xl rounded-lg p-4">
