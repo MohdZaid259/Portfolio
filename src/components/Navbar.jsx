@@ -38,14 +38,14 @@ export default function Header() {
   return (
     <section className="fixed top-0 w-full z-10 flex justify-around items-center py-2 backdrop-blur-sm tracking-normal md:tracking-wider" style={headerstyle}>
           <a href='/'>
-            <motion.img initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
+            <motion.img loading="lazy" initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className="w-8 sm:w-12 invert dark:invert-0" src={z} alt="" />
           </a>
           <div className="flex ">
             <div onClick={handleHam} className="sm:hidden">
               {ham ? (
-                <img className="w-5 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
+                <img loading="lazy" className="w-5 mt-1.5 dark:invert rounded-sm" src={close} alt="close" />
               ) : (
-                <img className="w-7 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
+                <img loading="lazy" className="w-7 mt-1 dark:invert rounded-sm" src={menu} alt="menu" />
               )}
             </div>
             <ul 

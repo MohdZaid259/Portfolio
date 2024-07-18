@@ -93,7 +93,7 @@ function Project() {
           <div key={projectIndex}>
             <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
               <div className='h-full flex-1'>
-                <motion.img
+                <motion.img loading='lazy'
                   initial={{opacity:0,x:-100}}
                   whileInView={{opacity:1,x:0}}
                   transition={{duration:0.7}}
@@ -106,7 +106,7 @@ function Project() {
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex}>
-                      <img
+                      <img loading='lazy'
                         className='border border-black rounded-sm aspect-video transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}

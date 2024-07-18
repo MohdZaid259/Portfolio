@@ -41,7 +41,7 @@ function Certificate() {
         return (
           <div key={id} className='flex flex-col lg:flex-row lg:px-10 py-5'>
           <div className='flex xl:flex-1 px-3 justify-center'>
-            <motion.img initial={{opacity:0,x:-100}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} className=' rounded-md' src={item.images} alt="certificate.png" />
+            <motion.img loading='lazy' initial={{opacity:0,x:-100}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} className=' rounded-md' src={item.images} alt="certificate.png" />
           </div>
           <div className='flex pt-3 lg:w-2/3 flex-col pl-3 sm:pl-5 lg:pl-10 '>
             <motion.h2 initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='font-semibold text-2xl'>{item.title}</motion.h2>

@@ -65,7 +65,7 @@ function Skills() {
                   return (
                       <motion.div variants={variants} key={cellIndex}>
                           {isImageCell && img[cellIndex / 2] && (
-                              <img src={img[cellIndex / 2]} alt="" className="p-1 md:p-2 border border-pink-700 dark:border-green-400 rounded-full w-11 h-11 sm:w-14 sm:h-14 md:w-16 md:h-16" />
+                              <img loading='lazy' src={img[cellIndex / 2]} alt="" className="p-1 md:p-2 border border-pink-700 dark:border-green-400 rounded-full w-11 h-11 sm:w-14 sm:h-14 md:w-16 md:h-16" />
                           )}
                       </motion.div>
                   );
