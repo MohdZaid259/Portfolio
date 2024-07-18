@@ -50,7 +50,7 @@ function Home() {
         <motion.a href={resume} download initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5,delay:2}} className='my-2 dark:bg-green-500 bg-pink-600 dark:hover:bg-green-600 hover:bg-pink-700 text-white rounded-md w-fit px-3 py-1 text-base sm:text-lg md:text-xl'>Download CV</motion.a>
       </div>
       <div className='flex flex-1 items-center m-auto'>
-        <motion.img loading='lazy' initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} className='md:pl-10 md:mt-10 h-1/6 md:h-2/5 lg:h-3/4 w-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0_20px_rgba(225,225,225,0.25)]' src={hero} alt="" />
+        <motion.img loading='eager' initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} className='md:pl-10 md:mt-10 h-1/6 md:h-2/5 lg:h-3/4 w-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0_20px_rgba(225,225,225,0.25)]' src={hero} alt="" />
       </div>
     </section>
   )
