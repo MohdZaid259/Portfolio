@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ecommercehero from '../Media/showoff/ecommercehero.png';
+import ecommercehero from '../Media/showoff/ecommercehero.jpg';
 import ecommerce1 from '../Media/showoff/ecommerce1.png';
 import ecommerce2 from '../Media/showoff/ecommerce2.png';
-import ecommerce3 from '../Media/showoff/ecommerce3.png';
+import ecommerce3 from '../Media/showoff/ecommerce3.jpg';
 import bloggerhero from '../Media/showoff/bloggerhero.png';
-import blogger1 from '../Media/showoff/blogger1.png';
+import blogger1 from '../Media/showoff/blogger1.jpg';
 import blogger2 from '../Media/showoff/blogger2.png';
 import blogger3 from '../Media/showoff/blogger3.png';
 import { motion } from 'framer-motion';
