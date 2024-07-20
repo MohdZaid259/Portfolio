@@ -16,11 +16,12 @@ export default function About() {
         <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400 '># know me</motion.h1>
         <motion.p initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='w-full text-base sm:text-lg md:text-xl'>
           <img loading='lazy' className='inline w-4 md:w-8 dark:invert-0 invert' src={qopen} alt=""/>
-          <p className='inline ml-6'>Hii, I'm Zaid, a Full-stack developer with a passion for building high-quality web applications. I specialize in using ReactJS, NextJS, and Tailwind CSS on the frontend, and NodeJS, Express, and MongoDB on the backend.<br/><br/></p>
+          <p className='inline ml-6'>Hey there! I’m Zaid, a front-end enthusiast with a flair for crafting delightful web experiences. Currently, I’m in my final year of pursuing a Bachelor’s degree in Computer Applications.<br/><br/></p>
           <p className='inline ml-6'>
-          I believe in creating websites that look great and perform exceptionally. Whether it's designing responsive layouts, optimizing performance, or developing robust backends, I strive to deliver top-notch results.<br/><br/></p>
-          <p className='inline ml-6 mr-6'>
-          If you need a developer skilled in the latest technologies with a strong design sense, let's chat about your project and how I can help bring your vision to life.</p>
+          My toolkit is robust, featuring HTML5, CSS3, JavaScript ES6+, and React.js. I'm also proficient in Tailwind CSS, Git, DevTools, Axios, Framer Motion, and Redux Toolkit. On the backend, I have worked on Node.js, Express.js, and MongoDB.<br/><br/></p>
+          <p className='inline ml-6'>
+          I've built projects like a blog app using Appwrite, where I implemented features such as user registration, login, public posting, and editing. My soft skills include problem-solving, teamwork, communication, and consistency—traits that I believe are essential for any successful project.<br/><br/></p>
+          <p className='inline ml-6 mr-6'>When I’m not chasing bugs, you’ll find me sipping chai, solving DSA puzzles, or debugging that pesky CSS code. Let’s connect—I’m all ears for tech talk and eager to collaborate on innovative projects!</p>
           <img loading='lazy' className='inline w-4 md:w-8 dark:invert-0 invert' src={qclose} alt=""/>
         </motion.p>
         <img loading='lazy' className='lg:ml-[52rem] m-auto w-24 sm:w-36 mt-7 dark:invert-0 invert dark:drop-shadow-[0_0_5px_rgba(0,0,225,1)]' src={signatureop} alt=""/>
