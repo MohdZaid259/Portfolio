@@ -19,7 +19,7 @@ export default function About() {
           <p className='inline ml-6'>Hey there! I’m Zaid, a front-end enthusiast with a flair for crafting delightful web experiences. Currently, I’m in my final year of pursuing a Bachelor’s degree in Computer Applications.<br/><br/></p>
           <p className='inline ml-6'>
           My toolkit is robust, featuring HTML5, CSS3, JavaScript ES6+, and React.js. I'm also proficient in Tailwind CSS, Git, DevTools, Axios, Framer Motion, and Redux Toolkit. On the backend, I've experience with Node.js, Express.js, and MongoDB.<br/><br/></p>
-          <p className='inline ml-6 mr-6'>
+          <p className='inline ml-6 mr-2'>
           I've built projects like a blog app using Appwrite, where I implemented features such as user registration, login, public posting, and editing. My soft skills include problem-solving, teamwork, communication, and consistency—traits that I believe are essential for any successful project.</p>
           {/* <p className='inline ml-6 mr-6'>When I’m not chasing bugs, you’ll find me sipping chai, solving DSA puzzles, or debugging that pesky CSS code. Let’s connect—I’m all ears for tech talk and eager to collaborate on innovative projects!</p> */}
           <img loading='lazy' className='inline w-4 md:w-8 dark:invert-0 invert' src={qclose} alt=""/>
