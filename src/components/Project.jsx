@@ -40,12 +40,14 @@ function Project() {
   const [mainImageIndices, setMainImageIndices] = useState(Array(projects.length).fill(0));
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setMainImageIndices(Array(projects.length).fill(0));
-    }, 4000); 
-    
-    return () => clearTimeout(timer);
-  }, [mainImageIndices]);
+    const interval = setInterval(() => {
+      setMainImageIndices((prevIndices) => 
+        prevIndices.map((index, i) => (index + 1) % projects[i].images.length)
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [projects]);
 
   const handleImageClick = (projectIndex, subImageIndex) => {
     setMainImageIndices(prevIndices => {
@@ -91,7 +93,7 @@ function Project() {
         const mainImage = project.images[mainImageIndex];
         return (
           <div key={projectIndex}>
-            <div className='flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
+            <div className='md:flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
               <div className='h-full flex-1'>
                 <motion.img loading='lazy'
                   initial={{opacity:0,x:-100}}
@@ -102,7 +104,7 @@ function Project() {
                   alt={project.title} 
                 />
               </div>
-              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto  flex flex-col items-center -mt-1 gap-2 lg:gap-3 flex-[0.32]'>
+              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto hidden md:flex flex-col items-center -mt-1 gap-2 lg:gap-3 flex-[0.32]'>
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
                     <div key={subImageIndex}>
@@ -122,7 +124,7 @@ function Project() {
                 <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7}}>
                   <a href={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</a>
                 </motion.button>
-                <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:1}}>
+                <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:0.5}}>
                   <a href={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</a>
                 </motion.button>
               </div>
