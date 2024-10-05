@@ -50,7 +50,7 @@ export default function Header() {
         </div>
         <ul onClick={handleHam} className={`dark:text-white sm:text-base w-auto rounded-lg sm:rounded-none p-2 sm:p-0 absolute sm:static top-16 right-2 ${
             ham
-              ? "opacity-100 translate-y-0 bg-black/90"
+              ? "opacity-100 translate-y-0 dark:bg-black/80 sm:dark:bg-transparent bg-green-100/80 sm:bg-transparent"
               : "opacity-0 sm:opacity-100 -translate-y-[140%] sm:translate-y-0"
           } flex flex-col sm:flex-row items-end sm:items-center gap-3 sm:gap-4 sm:text-lg transition-all duration-200 ease-in-out`}
         >
