@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import { ThemeProvider,Switcher } from '../context/Theme'
 import z from '../Media/z.png'
 import menu from '../Media/menu.png'

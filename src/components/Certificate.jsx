@@ -1,4 +1,3 @@
-import React from 'react'
 import Cyber_security from '../Media/Cyber_Security.jpg'
 import Gen_Ai from '../Media/Gen_Ai.jpg'
 import cyber from '../asset/cyber.pdf'

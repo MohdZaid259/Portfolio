@@ -1,4 +1,3 @@
-import React from 'react'
 import mail from '../Media/mail.png'
 import github from '../Media/github.png'
 import linkedin from '../Media/linkedin.png'
@@ -36,7 +35,7 @@ function Contact() {
       <h1 className='-ml-4 md:px-10 text-2xl md:text-3xl  lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Contact Me</h1>
       <div className='md:flex justify-around items-center'>
       <div className='flex flex-col gap-1 md:gap-3 mt-10'>
-        <h2 className='text-xl md:text-3xl font-bold '>Let's <span className='text-pink-600 dark:text-green-500'>Chat</span>.</h2>
+        <h2 className='text-xl md:text-3xl font-bold '>Let&apos;s <span className='text-pink-600 dark:text-green-500'>Chat</span>.</h2>
         <h2 className='text-xl md:text-3xl font-bold mb-5'>Tell me about your project.</h2>
         <div className="border-b-2 border-l-2 border-pink-600 dark:border-green-400 flex">
             <img loading='lazy' className='dark:invert w-8 h-auto m-4' src={mail} alt=""/>

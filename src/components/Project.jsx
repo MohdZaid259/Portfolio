@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ecommercehero from '../Media/showoff/ecommercehero.jpg';
 import ecommerce1 from '../Media/showoff/ecommerce1.png';
 import ecommerce2 from '../Media/showoff/ecommerce2.png';
@@ -47,13 +47,13 @@ function Project() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [projects]);
+  }, []);
 
   const handleImageClick = (projectIndex, subImageIndex) => {
     setMainImageIndices(prevIndices => {
       const newIndices = [...prevIndices];
       newIndices[projectIndex] = subImageIndex;
-      return newIndices;c
+      return newIndices;
     });
   };
 

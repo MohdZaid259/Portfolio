@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LoadingLine = () => {
   return (
     <div className="h-1 w-full ">

@@ -1,4 +1,4 @@
-import React,{useEffect,useRef} from 'react'
+import {useEffect,useRef} from 'react'
 import github from '../Media/github.png'
 import linkedin from '../Media/linkedin.png'
 import twitter from '../Media/twitter.png'

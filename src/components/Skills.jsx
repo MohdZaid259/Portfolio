@@ -1,4 +1,3 @@
-import React from 'react'
 import html from '../Media/skills/html.png' 
 import css from '../Media/skills/css.png' 
 import atom from '../Media/skills/atom.png' 
@@ -15,7 +14,7 @@ import mysql from '../Media/skills/mysql.png'
 import mongodb from '../Media/skills/mongodb.png' 
 import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
-import { delay, easeIn, easeInOut, motion, stagger } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion'
 
 function Skills() {
   const img = [

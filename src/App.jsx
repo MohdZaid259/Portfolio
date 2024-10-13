@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react'
+import {lazy, Suspense} from 'react'
 import Navbar from './components/Navbar'
 import Loading from './components/Loading'
 const Home = lazy(() => import('./components/Home'))
