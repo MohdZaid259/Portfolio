@@ -31,7 +31,7 @@ function Contact() {
   }
 
   return (
-      <section className='bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full px-10 py-10'>
+      <section className='bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-screen px-10 pt-24'>
       <h1 className='-ml-4 md:px-10 text-2xl md:text-3xl  lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Contact Me</h1>
       <div className='md:flex justify-around items-center'>
       <div className='flex flex-col gap-1 md:gap-3 mt-10'>
