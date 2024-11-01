@@ -5,7 +5,7 @@ import twitter from '../Media/twitter.png'
 import Typed from 'typed.js';
 import hero from '../Media/hero.webp'
 import { motion } from 'framer-motion';
-import resume from '../asset/.pdf'
+import resume from '../asset/resume.pdf'
 
 function Home() {
     const element =useRef(null);
