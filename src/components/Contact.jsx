@@ -31,7 +31,7 @@ function Contact() {
   }
 
   return (
-      <section className='bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-screen px-10 pt-24'>
+      <section className='bg-radial-gradient dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black w-full h-full lg:h-screen px-10 py-10'>
       <h1 className='-ml-4 md:px-10 text-2xl md:text-3xl  lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Contact Me</h1>
       <div className='md:flex justify-around items-center'>
       <div className='flex flex-col gap-1 md:gap-3 mt-10'>
@@ -44,7 +44,7 @@ function Contact() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><p className='font-bold text-pink-600 dark:text-green-400'>razvizaid259@gmail.com</p></a>
             </div>
         </div>
-        <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='ml-5 mt-1 flex bg-green-600 hover:bg-green-700 max-w-fit items-center gap-3 px-2 rounded' href="https://wa.me/979537555/" target='_blank'><img loading='lazy' aria-label='whatsapp' className='dark:invert w-7 h-auto my-2 ' src={whatsapp} alt="" />Chat on Whatsapp</motion.a>
+        <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='ml-5 mt-1 flex bg-green-600 hover:bg-green-700 max-w-fit items-center gap-3 px-2 rounded' href="https://wa.me/979537555/" target='_blank'><img loading='lazy' aria-label='whatsapp' className='dark:invert w-5 lg:w-6 h-auto my-2 ' src={whatsapp} alt="" />Chat on Whatsapp</motion.a>
         <div className="flex ml-5 mb-10 gap-5">
             <a href="https://x.com/zaidrazvi09" aria-label='twitter' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
             <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" aria-label='linkedin' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.3}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>
