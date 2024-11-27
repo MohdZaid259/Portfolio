@@ -20,15 +20,16 @@ import mongodb from '../Media/skills/mongodb.png'
 import git from '../Media/skills/git.png' 
 import github from '../Media/skills/github.png' 
 import jest from '../Media/skills/jest.png'
+import next from '../Media/skills/next.png'
 import { easeInOut, motion } from 'framer-motion'
 
 function Skills() {
   const img = [
-    html,css,atom,redux,tailwind,shadcn,node,appwrite,express,axios,firebase,framer,js,c,ts,mysql,mongodb,git,github,vercel,jest,postman
+    html,css,atom,redux,tailwind,shadcn,node,next,appwrite,express,axios,firebase,framer,js,c,ts,mysql,mongodb,git,github,vercel,jest,postman
   ]
   const skills=[
-    ['HTML 5','CSS 3','ReactJs','Redux','Tailwind','Framer Motion','Shadcn'],
-    ['NodeJs','Express','Appwrite','Axios','Firebase'],
+    ['HTML 5','CSS 3','ReactJs','Redux','Tailwind','Shadcn','Framer Motion'],
+    ['NodeJs','NextJs','Express','Appwrite','Axios','Firebase'],
     ['Typescript','Javascript','Python','c'],
     ['MongoDb','MySQL'],
     ['Git','Github','Postman','Vercel','Jest']

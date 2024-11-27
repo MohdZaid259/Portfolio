@@ -14,8 +14,8 @@ function Home() {
     useEffect(() => {
       const timer = setTimeout(() => {
         new Typed(element.current, {
-          strings: ['Mohd Zaid.', 'a Web Developer.', 'a Web Designer.'],
-          typeSpeed: 80,
+          strings: ['Mohd Zaid.', 'a Frontend Specialist', 'a FullStack Developer.'],
+          typeSpeed: 70,
         });
       }, 800);
       return () => clearTimeout(timer);

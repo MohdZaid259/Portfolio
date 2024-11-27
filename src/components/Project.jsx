@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import nextgenhero from '../Media/showoff/nextgenhero.png'
+import nextgen1 from '../Media/showoff/nextgen1.png'
+import nextgen2 from '../Media/showoff/nextgen2.png'
+import nextgen3 from '../Media/showoff/nextgen3.png'
 import ecommercehero from '../Media/showoff/ecommercehero.jpg';
 import ecommerce1 from '../Media/showoff/ecommerce1.png';
 import ecommerce2 from '../Media/showoff/ecommerce2.png';
@@ -11,29 +15,29 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: "NextGen Herbals",
+    subtitle: "The ecommerce",
+    description: "I built 'NextGen', a sleek eCommerce site for herbal products, using React.js and Tailwind CSS. Featuring an AI-powered chatbot and an optimized cart, it offers a fast, intuitive shopping experience. 'NextGen' showcases my passion for crafting modern, engaging web apps with smart functionality.",
+    images: [nextgenhero, nextgen1, nextgen2, nextgen3],
+    liveDemo: "https://nextgen-herbals.vercel.app/",
+    github: "https://github.com/MohdZaid259/NextGen.git"
+  },
+  {
+    title: "FlexBlogg",
+    subtitle: "The Blog webapp",
+    description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
+    images: [bloggerhero, blogger1, blogger2, blogger3],
+    liveDemo: "https://flexblogg.vercel.app/",
+    github: "https://github.com/MohdZaid259/Blogger.git"
+  },
+  {
     title: "Cara",
     subtitle: "The ecommerce",
     description: "I designed and developed 'Cara,' a frontend-based eCommerce website. Using React.js, Tailwind CSS, core JavaScript, and various other libraries, I brought this project to life. 'Cara' was the first fully-fledged website I created, showcasing my skills in modern web development and providing a smooth, user-friendly shopping experience.",
     images: [ecommercehero, ecommerce1, ecommerce2, ecommerce3],
     liveDemo: "https://mohdzaid259.github.io/Cara_07/",
     github: "https://github.com/MohdZaid259/Cara_07.git"
-  },
-  {
-    title: "Blogger",
-    subtitle: "Unlock passion",
-    description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
-    images: [bloggerhero, blogger1, blogger2, blogger3],
-    liveDemo: "https://flexblogg.vercel.app/",
-    github: "https://github.com/MohdZaid259/Blogger.git"
-  },
-  // {
-  //   title: "Youtube",
-  //   subtitle: "A legit clone",
-  //   description: "Built a full-stack web application with Express.js and React.js, seamlessly integrating MongoDB using Mongoose and optimizing for SEO to enhance visibility. Collaborating closely with 3 friends in pair programming sessions, we took Git to the next level, refining our development workflow and achieving outstanding results.",
-  //   images: [bloggerhero, blogger1, blogger2, blogger3],
-  //   liveDemo: "",
-  //   github: "https://github.com/MohdZaid259/Youtube.git"
-  // }
+  }
 ];
 
 function Project() {
