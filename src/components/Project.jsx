@@ -20,7 +20,8 @@ const projects = [
     description: "I built 'NextGen', a sleek eCommerce site for herbal products, using React.js and Tailwind CSS. Featuring an AI-powered chatbot and an optimized cart, it offers a fast, intuitive shopping experience. 'NextGen' showcases my passion for crafting modern, engaging web apps with smart functionality.",
     images: [nextgenhero, nextgen1, nextgen2, nextgen3],
     liveDemo: "https://nextgen-herbals.vercel.app/",
-    github: "https://github.com/MohdZaid259/NextGen.git"
+    github: "https://github.com/MohdZaid259/NextGen.git",
+    buy:true
   },
   {
     title: "FlexBlogg",
@@ -131,6 +132,11 @@ function Project() {
                 <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:0.5}}>
                   <a href={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</a>
                 </motion.button>
+                {project.buy ? <>
+                  <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:1.0}}>
+                  <a href='https://wa.me/979537555/' target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Buy Now</a>
+                </motion.button>
+                </>: <></>}
               </div>
               <div className='tracking-wider text-xl'>
                 <motion.span initial='hidden' whileInView='visible' variants={variants} transition={{transition:1,delay:0.5}} className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </motion.span>

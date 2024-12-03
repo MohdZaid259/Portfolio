@@ -34,6 +34,9 @@ function Skills() {
     ['MongoDb','MySQL'],
     ['Git','Github','Postman','Vercel','Jest']
   ]
+  const tooltipTexts = [
+    'HTML','CSS','ReactJs','Redux','Tailwind','Shadcn','NodeJs','NextJs','Appwrite','Express','Axios','Firebase','Framer Motion','Javascript','c','Typescript','MySQL','MongoDb','Git','Github','Vercel','Jest','Postman'
+  ];
   const variants = {
     hidden:{
       opacity:0,
@@ -76,15 +79,29 @@ function Skills() {
         >
           {gridCells.map((cellIndex) => {
             const isImageCell = cellIndex % 1 === 0;
+            const imageIndex = cellIndex / 2;
+            const tooltipText = tooltipTexts[imageIndex] || "skill";
             return (
-              <motion.div variants={variants} key={cellIndex}>
-                {isImageCell && img[cellIndex / 2] && (
-                  <img
-                    loading="lazy"
-                    src={img[cellIndex / 2]}
-                    alt="img"
-                    className="p-1 md:p-2 border border-pink-700 aspect-square object-cover dark:border-green-400 rounded-full w-11 sm:w-14 md:w-16"
-                  />
+              <motion.div variants={variants} key={cellIndex} className="relative">
+                {isImageCell && img[imageIndex] && (
+                  <div className="group relative">
+                    <img
+                      loading="lazy"
+                      src={img[imageIndex]}
+                      alt="img"
+                      className={`p-1 md:p-2 border border-pink-700 aspect-square object-cover dark:border-green-400 rounded-full w-11 sm:w-14 md:w-16 hover:cursor-pointer`}
+                      onClick={(e) => {
+                        const tooltip = e.currentTarget.nextSibling;
+                        tooltip.classList.add('visible');
+                        setTimeout(() => {
+                          tooltip.classList.remove('visible');
+                        }, 500); 
+                      }}
+                    />
+                    <span
+                      className="tooltip absolute left-1/2 -translate-x-1/2 top-full mt-2 text-sm text-white bg-transparent rounded opacity-0 group-hover:opacity-100 pointer-events-none"
+                    >{tooltipText}</span>
+                  </div>
                 )}
               </motion.div>
             );
