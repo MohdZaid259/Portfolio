@@ -15,7 +15,7 @@ function Contact() {
     const { Name, subject, message} = data;
     const whatsappMessage = `Hi, I am ${Name}. ${subject}: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/979537555?text=${encodedMessage}`; 
+    const whatsappURL = `https://wa.me/919795372555?text=${encodedMessage}`; 
     window.open(whatsappURL, "_blank");
   };
 
@@ -44,7 +44,7 @@ function Contact() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=razvizaid259@example.com" target='_blank'><p className='font-bold text-pink-600 dark:text-green-400'>razvizaid259@gmail.com</p></a>
             </div>
         </div>
-        <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='ml-5 mt-1 flex bg-green-600 hover:bg-green-700 max-w-fit items-center gap-3 px-2 rounded' href="https://wa.me/979537555/" target='_blank'><img loading='lazy' aria-label='whatsapp' className='dark:invert w-5 lg:w-6 h-auto my-2 ' src={whatsapp} alt="" />Chat on Whatsapp</motion.a>
+        <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='ml-5 mt-1 flex bg-green-600 hover:bg-green-700 max-w-fit items-center gap-3 px-2 rounded' href="https://wa.me/919795372555/" target='_blank'><img loading='lazy' aria-label='whatsapp' className='dark:invert w-5 lg:w-6 h-auto my-2 ' src={whatsapp} alt="" />Chat on Whatsapp</motion.a>
         <div className="flex ml-5 mb-10 gap-5">
             <a href="https://x.com/zaidrazvi09" aria-label='twitter' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={twitter} alt="" /></a>
             <a href="https://www.linkedin.com/in/mohd-zaid-b28aa2248/" aria-label='linkedin' target='_blank'><motion.img loading='lazy' initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5,delay:0.3}} className='dark:invert w-7 h-auto my-2 hover:bg-pink-500 p-1 rounded' src={linkedin} alt="" /></a>

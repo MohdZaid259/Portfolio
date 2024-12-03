@@ -125,7 +125,7 @@ function Project() {
               </motion.div>
             </div>
             <div className='px-4 lg:px-12'>
-              <div className='flex gap-3 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
+              <div className='flex gap-2 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
                 <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7}}>
                   <a href={project.github} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Github</a>
                 </motion.button>
@@ -134,7 +134,7 @@ function Project() {
                 </motion.button>
                 {project.buy ? <>
                   <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:1.0}}>
-                  <a href='https://wa.me/979537555/' target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Buy Now</a>
+                  <a href='https://wa.me/919795372555/' target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Buy Now</a>
                 </motion.button>
                 </>: <></>}
               </div>
