@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function Freelance() {
   return (
-    <div className='flex justify-start gap-10 pt-5 items-center'>
+    <div className='flex justify-start gap-5 pt-5 items-center'>
       <motion.div initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.7,delay:2.5}} className='w-32 sm:w-40 md:w-52 lg:w-60 group relative h-[72px] sm:min-h-20 md:min-h-28 lg:min-h-32 border-green-500 border-2 rounded-xl bg-zinc-700 p-2'>
         <a href="http://fiverr.com/s/NN6KkpG" target='_blank'>
         <img src={world} alt="" className='absolute -translate-y-1 transition-transform group-hover:scale-90 duration-300 invert opacity-20' />
