@@ -51,7 +51,7 @@ function Skills() {
     }
   }
   const textVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: -10 },
     visible: (i)=>(
       { 
         opacity: 1, 

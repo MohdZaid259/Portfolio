@@ -43,10 +43,10 @@ function Certificate() {
             <motion.img loading='lazy' initial={{opacity:0,x:-100}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} className='rounded-md' src={item.images} alt="certificate.png" />
           </div>
           <div className='flex pt-3 lg:w-2/3 flex-col pl-3 sm:pl-5 lg:pl-10 '>
-            <motion.h2 initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5}} className='font-semibold text-2xl'>{item.title}</motion.h2>
-            <motion.h3 initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5, delay:0.4}} className='text-xl italic'>{item.subtitle}</motion.h3>
-            <motion.p initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5, delay:0.8}} className='pt-5 text-xl '>{item.description}</motion.p>
-            <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.5, delay:1}}  href={item.link} target='_blank' className='border-2 w-24 border-pink-700 dark:border-green-500  text-center mt-3 py-0.5  lg:py-1 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150'>Certificate</motion.a>
+            <motion.h2 initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.4}} className='font-semibold text-2xl'>{item.title}</motion.h2>
+            <motion.h3 initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.4, delay:0.3}} className='text-xl italic'>{item.subtitle}</motion.h3>
+            <motion.p initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.4, delay:0.6}} className='pt-5 text-xl '>{item.description}</motion.p>
+            <motion.a initial='hidden' whileInView='visible' variants={variants} transition={{duration:0.4, delay:0.9}}  href={item.link} target='_blank' className='border-2 w-24 border-pink-700 dark:border-green-500  text-center mt-3 py-0.5  lg:py-1 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150'>Certificate</motion.a>
           </div>
         </div>
         )

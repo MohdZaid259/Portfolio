@@ -12,8 +12,8 @@ export default function About() {
   return (
     <section className='flex bg-radial-gradient py-10 h-auto lg:h-screen gap-7 justify-center dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
       <div className='md:flex m-auto md:flex-col px-5 sm:pl-8 md:px-16 justify-center items-start '>
-        <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400 '># know me</motion.h1>
-        <motion.p initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.5}} className='w-full text-base sm:text-lg md:text-xl'>
+        <motion.h1 initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.4}} className='text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400 '># know me</motion.h1>
+        <motion.p initial='hidden' whileInView='visible' variants={textVariants} transition={{duration:0.4}} className='w-full text-base sm:text-lg md:text-xl'>
           <img loading='lazy' className='inline w-4 md:w-8 dark:invert-0 invert' src={qopen} alt=""/>
           <p className='inline ml-6'>Hey there! I’m Zaid, a frontend specialist evolving into a full-stack innovator with a passion for building seamless, high-performance web applications. As a final-year Computer Applications student, I’m constantly pushing boundaries in modern web development.<br/><br/></p>
           <p className='inline ml-6'>
