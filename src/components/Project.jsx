@@ -11,13 +11,25 @@ import bloggerhero from '../Media/showoff/bloggerhero.png';
 import blogger1 from '../Media/showoff/blogger1.jpg';
 import blogger2 from '../Media/showoff/blogger2.png';
 import blogger3 from '../Media/showoff/blogger3.png';
+import ythero from '../Media/showoff/ythero.png'
+import yt1 from '../Media/showoff/yt1.png'
+import yt2 from '../Media/showoff/yt2.png'
+import yt3 from '../Media/showoff/yt3.png'
 import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: "ViewTube",
+    subtitle: "The Yt Clone",
+    description: "A dynamic, high-performance video streaming web app built with Next.js, Express.js, and MongoDB. Features include JWT auth, seamless video & thumbnail uploads via Cloudinary, real-time likes, comments, views, and subscriptions. Users can manage playlists, watch history, and even save videos for later. Includes an admin panel and smart recommendations using real YouTube APIs. Feels like YouTube, built from scratch!",
+    images: [ythero, yt1, yt2, yt3],
+    liveDemo: "https://yt-frontend-three.vercel.app/",
+    github: "https://github.com/MohdZaid259/yt-frontend.git",
+  },
+  {
     title: "NextGen Herbals",
     subtitle: "The ecommerce",
-    description: "I built 'NextGen', a sleek eCommerce site for herbal products, using React.js and Tailwind CSS. Featuring an AI-powered chatbot and an optimized cart, it offers a fast, intuitive shopping experience. 'NextGen' showcases my passion for crafting modern, engaging web apps with smart functionality.",
+    description: "A modern, full-featured eCommerce site for herbal products built with React.js and Tailwind CSS. Integrated with Firebase for secure authentication and real-time data, and Razorpay for smooth, reliable payments. Features include dynamic product listings, shopping cart, order history, and a clean, mobile-friendly UI. Fast, secure, and designed to deliver a premium shopping experience with a traditional herbal touch.",
     images: [nextgenhero, nextgen1, nextgen2, nextgen3],
     liveDemo: "https://nextgen-herbals.vercel.app/",
     github: "https://github.com/MohdZaid259/NextGen.git",
