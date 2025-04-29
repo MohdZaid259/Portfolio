@@ -52,7 +52,7 @@ function Home() {
       <Freelance/>
       </div>
       <div className='flex flex-1 items-center m-auto'>
-        <motion.img loading='eager' initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} className='md:pl-10 md:mt-10 h-1/6 sm:h-1/5 lg:h-1/4 drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.25)]' src={hero} alt="" />
+        {/* <motion.img loading='eager' initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} className='md:pl-10 md:mt-10 h-1/6 sm:h-1/5 lg:h-1/4 drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_0_10px_rgba(225,225,225,0.25)]' src={hero} alt="" /> */}
       </div>
     </section>
   )
