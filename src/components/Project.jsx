@@ -3,14 +3,15 @@ import nextgenhero from '../Media/showoff/nextgenhero.png'
 import nextgen1 from '../Media/showoff/nextgen1.png'
 import nextgen2 from '../Media/showoff/nextgen2.png'
 import nextgen3 from '../Media/showoff/nextgen3.png'
-import ecommercehero from '../Media/showoff/ecommercehero.jpg';
-import ecommerce1 from '../Media/showoff/ecommerce1.png';
-import ecommerce2 from '../Media/showoff/ecommerce2.png';
-import ecommerce3 from '../Media/showoff/ecommerce3.jpg';
-import bloggerhero from '../Media/showoff/bloggerhero.png';
-import blogger1 from '../Media/showoff/blogger1.jpg';
-import blogger2 from '../Media/showoff/blogger2.png';
-import blogger3 from '../Media/showoff/blogger3.png';
+import lsitHero from '../Media/showoff/lsitHero.png'
+import lsit1 from '../Media/showoff/lsit1.png'
+import lsit2 from '../Media/showoff/lsit2.png'
+import lsit3 from '../Media/showoff/lsit3.png'
+import rdtechHero from '../Media/showoff/rdtechHero.png'
+import rdtech1 from '../Media/showoff/rdtech1.png'
+import rdtech2 from '../Media/showoff/rdtech2.png'
+import rdtech3 from '../Media/showoff/rdtech3.png'
+
 import ythero from '../Media/showoff/ythero.png'
 import yt1 from '../Media/showoff/yt1.png'
 import yt2 from '../Media/showoff/yt2.png'
@@ -19,38 +20,41 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: "LS4IT",
+    subtitle: "Fabric Manufacturing Company",
+    description:
+      "A professional corporate website built as a freelance project for LS4IT, a leading fabric manufacturing company. Designed with Next.js, Tailwind CSS, and a headless CMS, the site supports **multi-language content (English & Arabic)** with smooth language switching. Optimized with CDN delivery, advanced SEO practices, and blazing-fast load times. Integrated a custom CMS for easy content management, product showcasing, and blog updates. Fully responsive, secure, and tailored for a global audience in the textile industry.",
+    images: [lsitHero, lsit1, lsit2, lsit3],
+    liveDemo: "https://www.ls4it.com/en",
+    github: "https://github.com/MohdZaid259/lsit",
+  },
+  {
+    title: "RDTech Group",
+    subtitle: "Multi-Million Group of Companies",
+    description:
+      "A large-scale, enterprise-grade website delivered as a freelance project for RDTech Group, a diversified multi-million business conglomerate. Built with Next.js, TypeScript, and Tailwind CSS, backed by a powerful CMS for effortless updates across multiple divisions. The site includes **multi-language support, global CDN integration, SEO optimization, custom animations, and scalable architecture**. Focused on showcasing the brand’s subsidiaries, projects, and services with a premium, corporate aesthetic. Designed for speed, accessibility, and long-term scalability, making it a true digital flagship for the group.",
+    images: [rdtechHero, rdtech1, rdtech2, rdtech3],
+    liveDemo: "https://rdtech-group.com/",
+    github: "https://github.com/MohdZaid259/rdtech.git",
+  },
+  {
     title: "ViewTube",
     subtitle: "The Yt Clone",
-    description: "A dynamic, high-performance video streaming web app built with Next.js, Express.js, and MongoDB. Features include JWT auth, seamless video & thumbnail uploads via Cloudinary, real-time likes, comments, views, and subscriptions. Users can manage playlists, watch history, and even save videos for later. Includes an admin panel and smart recommendations using real YouTube APIs. Feels like YouTube, built from scratch!",
+    description:
+      "A dynamic, high-performance video streaming web app built with Next.js, Express.js, and MongoDB. Features include JWT auth, seamless video & thumbnail uploads via Cloudinary, real-time likes, comments, views, and subscriptions. Users can manage playlists, watch history, and even save videos for later. Includes an admin panel and smart recommendations using real YouTube APIs. Feels like YouTube, built from scratch!",
     images: [ythero, yt1, yt2, yt3],
     liveDemo: "https://yt-frontend-three.vercel.app/",
     github: "https://github.com/MohdZaid259/yt-frontend.git",
   },
   {
     title: "NextGen Herbals",
-    subtitle: "The ecommerce",
-    description: "A modern, full-featured eCommerce site for herbal products built with React.js and Tailwind CSS. Integrated with Firebase for secure authentication and real-time data, and Razorpay for smooth, reliable payments. Features include dynamic product listings, shopping cart, order history, and a clean, mobile-friendly UI. Fast, secure, and designed to deliver a premium shopping experience with a traditional herbal touch.",
+    subtitle: "The Ecommerce",
+    description:
+      "A modern, full-featured eCommerce site for herbal products built with React.js and Tailwind CSS. Integrated with Firebase for secure authentication and real-time data, and Razorpay for smooth, reliable payments. Features include dynamic product listings, shopping cart, order history, and a clean, mobile-friendly UI. Fast, secure, and designed to deliver a premium shopping experience with a traditional herbal touch.",
     images: [nextgenhero, nextgen1, nextgen2, nextgen3],
     liveDemo: "https://nextgen-herbals.vercel.app/",
     github: "https://github.com/MohdZaid259/NextGen.git",
-    buy:true
   },
-  {
-    title: "FlexBlogg",
-    subtitle: "The Blog webapp",
-    description: "Built and deployed a production-quality blog application using Appwrite (backend-as-a-service). Utilizing a modern tech stack, including React.js, Tailwind CSS, and various other libraries, I engineered the application for seamless performance and robust functionality.",
-    images: [bloggerhero, blogger1, blogger2, blogger3],
-    liveDemo: "https://flexblogg.vercel.app/",
-    github: "https://github.com/MohdZaid259/Blogger.git"
-  },
-  {
-    title: "Cara",
-    subtitle: "The ecommerce",
-    description: "I designed and developed 'Cara,' a frontend-based eCommerce website. Using React.js, Tailwind CSS, core JavaScript, and various other libraries, I brought this project to life. 'Cara' was the first fully-fledged website I created, showcasing my skills in modern web development and providing a smooth, user-friendly shopping experience.",
-    images: [ecommercehero, ecommerce1, ecommerce2, ecommerce3],
-    liveDemo: "https://mohdzaid259.github.io/Cara_07/",
-    github: "https://github.com/MohdZaid259/Cara_07.git"
-  }
 ];
 
 function Project() {
