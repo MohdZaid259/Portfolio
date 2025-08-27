@@ -11,7 +11,6 @@ import rdtechHero from '../Media/showoff/rdtechHero.png'
 import rdtech1 from '../Media/showoff/rdtech1.png'
 import rdtech2 from '../Media/showoff/rdtech2.png'
 import rdtech3 from '../Media/showoff/rdtech3.png'
-
 import ythero from '../Media/showoff/ythero.png'
 import yt1 from '../Media/showoff/yt1.png'
 import yt2 from '../Media/showoff/yt2.png'
@@ -108,29 +107,42 @@ function Project() {
 
   return (
     <section className='h-full px-2 bg-radial-gradient md:px-4 lg:px-10 py-10 dark:bg-gradient-to-r dark:from-black dark:via-gray-950 dark:to-gray-900 dark:text-white text-black'>
-      <h1 className='px-2 sm:pl-5 md:px-12 text-2xl md:text-3xl lg:text-5xl mb-7 font-bold text-pink-600 dark:text-green-400'># Projects</h1>
+      <h1 className='px-2 sm:pl-5 md:px-12 text-2xl md:text-3xl lg:text-5xl mb-12 font-bold text-pink-600 dark:text-green-400'># Projects</h1>
+      
       {projects.map((project, projectIndex) => {
         const mainImageIndex = mainImageIndices[projectIndex];
         const mainImage = project.images[mainImageIndex];
         return (
-          <div key={projectIndex}>
-            <div className='md:flex mx-2 md:mx-4 lg:mx-12 my-3 gap-3'>
-              <div className='h-full flex-1'>
-                <motion.img loading='lazy'
+          <div key={projectIndex} className="mb-16"> {/* Added spacing between projects */}
+            
+            {/* Image Row */}
+            <div className='md:flex mx-2 md:mx-4 lg:mx-12 gap-3 items-stretch'>
+              {/* Left Main Image */}
+              <div className='flex-1 flex'>
+                <motion.img 
+                  loading='lazy'
                   initial={{opacity:0,x:-100}}
                   whileInView={{opacity:1,x:0}}
                   transition={{duration:0.5}}
-                  className='border border-black rounded-sm transition-opacity duration-1000' 
+                  className='w-full h-full object-cover border border-black rounded-sm transition-opacity duration-1000' 
                   src={mainImage} 
                   alt={project.title} 
                 />
               </div>
-              <motion.div initial='hidden' whileInView='visible' variants={projectVarient} className='h-auto hidden md:flex flex-col items-center -mt-1 gap-2 lg:gap-3 flex-[0.32]'>
+
+              {/* Right Thumbnails */}
+              <motion.div 
+                initial='hidden' 
+                whileInView='visible' 
+                variants={projectVarient} 
+                className='hidden md:flex flex-col gap-2 lg:gap-3 flex-[0.32] h-full'
+              >
                 {project.images.map((image, subImageIndex) => (
                   subImageIndex !== mainImageIndex && (
-                    <div key={subImageIndex}>
-                      <img loading='lazy'
-                        className='border border-black rounded-sm aspect-video transition-opacity duration-1000'
+                    <div key={subImageIndex} className="flex-1">
+                      <img 
+                        loading='lazy'
+                        className='w-full h-full object-cover border border-black rounded-sm cursor-pointer transition-opacity duration-1000'
                         src={image}
                         onClick={() => handleImageClick(projectIndex, subImageIndex)}
                         alt={project.title}
@@ -140,6 +152,8 @@ function Project() {
                 ))}
               </motion.div>
             </div>
+
+            {/* Project Info */}
             <div className='px-4 lg:px-12'>
               <div className='flex gap-2 lg:gap-5 mx-2 lg:mx-6 mt-5 mb-5'>
                 <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.4}}>
@@ -148,11 +162,11 @@ function Project() {
                 <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.4,delay:0.3}}>
                   <a href={project.liveDemo} target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Live Demo</a>
                 </motion.button>
-                {project.buy ? <>
+                {project.buy ? (
                   <motion.button initial={{opacity:0,x:-50}} whileInView={{opacity:1,x:0}} transition={{duration:0.4,delay:0.6}}>
-                  <a href='https://wa.me/919795372555/' target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Buy Now</a>
-                </motion.button>
-                </>: <></>}
+                    <a href='https://wa.me/919795372555/' target="_blank" className="border-2 border-pink-700 dark:border-green-500 px-2 py-1 lg:px-4 lg:py-2 text-lg rounded hover:bg-pink-600 dark:hover:bg-green-600 duration-150">Buy Now</a>
+                  </motion.button>
+                ) : null}
               </div>
               <div className='tracking-wider text-xl'>
                 <motion.span initial='hidden' whileInView='visible' variants={variants} transition={{transition:0.4,delay:0.3}} className='text-3xl font-bold text-pink-600 dark:text-green-400'>{project.title} : </motion.span>
